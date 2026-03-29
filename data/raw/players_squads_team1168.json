@@ -1,0 +1,223 @@
+{
+  "get": "players/squads",
+  "parameters": {
+    "team": "1168"
+  },
+  "errors": [],
+  "results": 1,
+  "paging": {
+    "current": 1,
+    "total": 1
+  },
+  "response": [
+    {
+      "team": {
+        "id": 1168,
+        "name": "Turku PS",
+        "logo": "https://media.api-sports.io/football/teams/1168.png"
+      },
+      "players": [
+        {
+          "id": 560696,
+          "name": "N. Harju",
+          "age": 22,
+          "number": 30,
+          "position": "Goalkeeper",
+          "photo": "https://media.api-sports.io/football/players/560696.png"
+        },
+        {
+          "id": 236456,
+          "name": "E. Henriksson",
+          "age": 22,
+          "number": 1,
+          "position": "Goalkeeper",
+          "photo": "https://media.api-sports.io/football/players/236456.png"
+        },
+        {
+          "id": 560714,
+          "name": "D. Lauri",
+          "age": 16,
+          "number": 12,
+          "position": "Goalkeeper",
+          "photo": "https://media.api-sports.io/football/players/560714.png"
+        },
+        {
+          "id": 560667,
+          "name": "J. Aitos",
+          "age": 18,
+          "number": 14,
+          "position": "Defender",
+          "photo": "https://media.api-sports.io/football/players/560667.png"
+        },
+        {
+          "id": 558973,
+          "name": "C. Azongnitode",
+          "age": 24,
+          "number": 5,
+          "position": "Defender",
+          "photo": "https://media.api-sports.io/football/players/558973.png"
+        },
+        {
+          "id": 553188,
+          "name": "O. Haggstrom",
+          "age": 21,
+          "number": 2,
+          "position": "Defender",
+          "photo": "https://media.api-sports.io/football/players/553188.png"
+        },
+        {
+          "id": 55721,
+          "name": "M. Hr\u00e1deck\u00fd",
+          "age": 30,
+          "number": 14,
+          "position": "Defender",
+          "photo": "https://media.api-sports.io/football/players/55721.png"
+        },
+        {
+          "id": 365254,
+          "name": "T. Karkulowski",
+          "age": 21,
+          "number": 15,
+          "position": "Defender",
+          "photo": "https://media.api-sports.io/football/players/365254.png"
+        },
+        {
+          "id": 560628,
+          "name": "A. Sairinen",
+          "age": 31,
+          "number": 4,
+          "position": "Defender",
+          "photo": "https://media.api-sports.io/football/players/560628.png"
+        },
+        {
+          "id": 348160,
+          "name": "N. Talo",
+          "age": 22,
+          "number": 24,
+          "position": "Defender",
+          "photo": "https://media.api-sports.io/football/players/348160.png"
+        },
+        {
+          "id": 586554,
+          "name": "Eetu Turkki",
+          "age": 18,
+          "number": 3,
+          "position": "Defender",
+          "photo": "https://media.api-sports.io/football/players/586554.png"
+        },
+        {
+          "id": 560627,
+          "name": "T. Vakiparta",
+          "age": 17,
+          "number": 28,
+          "position": "Defender",
+          "photo": "https://media.api-sports.io/football/players/560627.png"
+        },
+        {
+          "id": 278895,
+          "name": "T. Zaal",
+          "age": 21,
+          "number": 22,
+          "position": "Defender",
+          "photo": "https://media.api-sports.io/football/players/278895.png"
+        },
+        {
+          "id": 553187,
+          "name": "A. Coulibaly",
+          "age": 29,
+          "number": 8,
+          "position": "Midfielder",
+          "photo": "https://media.api-sports.io/football/players/553187.png"
+        },
+        {
+          "id": 560624,
+          "name": "R. Harjanne",
+          "age": 18,
+          "number": 7,
+          "position": "Midfielder",
+          "photo": "https://media.api-sports.io/football/players/560624.png"
+        },
+        {
+          "id": 137509,
+          "name": "L. Ikonen",
+          "age": 22,
+          "number": 26,
+          "position": "Midfielder",
+          "photo": "https://media.api-sports.io/football/players/137509.png"
+        },
+        {
+          "id": 546354,
+          "name": "P. Juvanteny",
+          "age": 25,
+          "number": 6,
+          "position": "Midfielder",
+          "photo": "https://media.api-sports.io/football/players/546354.png"
+        },
+        {
+          "id": 353523,
+          "name": "M. K\u00f6nkk\u00f6l\u00e4",
+          "age": 22,
+          "number": 10,
+          "position": "Midfielder",
+          "photo": "https://media.api-sports.io/football/players/353523.png"
+        },
+        {
+          "id": 560668,
+          "name": "N. Rajamaki",
+          "age": 18,
+          "number": 18,
+          "position": "Midfielder",
+          "photo": "https://media.api-sports.io/football/players/560668.png"
+        },
+        {
+          "id": 55520,
+          "name": "A. Sihvonen",
+          "age": 29,
+          "number": 17,
+          "position": "Midfielder",
+          "photo": "https://media.api-sports.io/football/players/55520.png"
+        },
+        {
+          "id": 553208,
+          "name": "S. Anini",
+          "age": 23,
+          "number": 17,
+          "position": "Attacker",
+          "photo": "https://media.api-sports.io/football/players/553208.png"
+        },
+        {
+          "id": 6841,
+          "name": "L. Ivanovic",
+          "age": 25,
+          "number": 9,
+          "position": "Attacker",
+          "photo": "https://media.api-sports.io/football/players/6841.png"
+        },
+        {
+          "id": 163547,
+          "name": "M. Kauppila",
+          "age": 25,
+          "number": 20,
+          "position": "Attacker",
+          "photo": "https://media.api-sports.io/football/players/163547.png"
+        },
+        {
+          "id": 560591,
+          "name": "A. Muzaci",
+          "age": 29,
+          "number": 29,
+          "position": "Attacker",
+          "photo": "https://media.api-sports.io/football/players/560591.png"
+        },
+        {
+          "id": 392478,
+          "name": "E. Vauhkonen",
+          "age": 19,
+          "number": 11,
+          "position": "Attacker",
+          "photo": "https://media.api-sports.io/football/players/392478.png"
+        }
+      ]
+    }
+  ]
+}

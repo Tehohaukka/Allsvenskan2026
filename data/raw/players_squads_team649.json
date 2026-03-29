@@ -1,0 +1,255 @@
+{
+  "get": "players/squads",
+  "parameters": {
+    "team": "649"
+  },
+  "errors": [],
+  "results": 1,
+  "paging": {
+    "current": 1,
+    "total": 1
+  },
+  "response": [
+    {
+      "team": {
+        "id": 649,
+        "name": "HJK Helsinki",
+        "logo": "https://media.api-sports.io/football/teams/649.png"
+      },
+      "players": [
+        {
+          "id": 443785,
+          "name": "M. Haapanen",
+          "age": 18,
+          "number": 89,
+          "position": "Goalkeeper",
+          "photo": "https://media.api-sports.io/football/players/443785.png"
+        },
+        {
+          "id": 55330,
+          "name": "J. \u00d6st",
+          "age": 35,
+          "number": 1,
+          "position": "Goalkeeper",
+          "photo": "https://media.api-sports.io/football/players/55330.png"
+        },
+        {
+          "id": 560689,
+          "name": "J. Tanska",
+          "age": 19,
+          "number": 79,
+          "position": "Goalkeeper",
+          "photo": "https://media.api-sports.io/football/players/560689.png"
+        },
+        {
+          "id": 270584,
+          "name": "M. Bogi\u0107evi\u0107",
+          "age": 27,
+          "number": 31,
+          "position": "Defender",
+          "photo": "https://media.api-sports.io/football/players/270584.png"
+        },
+        {
+          "id": 1255,
+          "name": "T. Cissokho",
+          "age": 25,
+          "number": 3,
+          "position": "Defender",
+          "photo": "https://media.api-sports.io/football/players/1255.png"
+        },
+        {
+          "id": 560691,
+          "name": "N. Kroupkin",
+          "age": 16,
+          "number": 87,
+          "position": "Defender",
+          "photo": "https://media.api-sports.io/football/players/560691.png"
+        },
+        {
+          "id": 392509,
+          "name": "E. Leve\u00c3\u00a4lahti",
+          "age": 19,
+          "number": 47,
+          "position": "Defender",
+          "photo": "https://media.api-sports.io/football/players/392509.png"
+        },
+        {
+          "id": 138890,
+          "name": "Brooklyn Lyons-Foster",
+          "age": 25,
+          "number": 2,
+          "position": "Defender",
+          "photo": "https://media.api-sports.io/football/players/138890.png"
+        },
+        {
+          "id": 202016,
+          "name": "L. Montano",
+          "age": 26,
+          "number": 14,
+          "position": "Defender",
+          "photo": "https://media.api-sports.io/football/players/202016.png"
+        },
+        {
+          "id": 392508,
+          "name": "K. Simojoki",
+          "age": 19,
+          "number": 13,
+          "position": "Defender",
+          "photo": "https://media.api-sports.io/football/players/392508.png"
+        },
+        {
+          "id": 55339,
+          "name": "V. Tikkanen",
+          "age": 26,
+          "number": 6,
+          "position": "Defender",
+          "photo": "https://media.api-sports.io/football/players/55339.png"
+        },
+        {
+          "id": 263879,
+          "name": "M. Ylitolva",
+          "age": 21,
+          "number": 28,
+          "position": "Defender",
+          "photo": "https://media.api-sports.io/football/players/263879.png"
+        },
+        {
+          "id": 163497,
+          "name": "M. Borchers",
+          "age": 23,
+          "number": 9,
+          "position": "Midfielder",
+          "photo": "https://media.api-sports.io/football/players/163497.png"
+        },
+        {
+          "id": 465212,
+          "name": "Alfie Cicale",
+          "age": 23,
+          "number": 7,
+          "position": "Midfielder",
+          "photo": "https://media.api-sports.io/football/players/465212.png"
+        },
+        {
+          "id": 196062,
+          "name": "J. Kallinen",
+          "age": 23,
+          "number": 15,
+          "position": "Midfielder",
+          "photo": "https://media.api-sports.io/football/players/196062.png"
+        },
+        {
+          "id": 55529,
+          "name": "L. Lingman",
+          "age": 27,
+          "number": 10,
+          "position": "Midfielder",
+          "photo": "https://media.api-sports.io/football/players/55529.png"
+        },
+        {
+          "id": 425780,
+          "name": "P. Mentu",
+          "age": 19,
+          "number": 21,
+          "position": "Midfielder",
+          "photo": "https://media.api-sports.io/football/players/425780.png"
+        },
+        {
+          "id": 546389,
+          "name": "L. Moller",
+          "age": 20,
+          "number": 22,
+          "position": "Midfielder",
+          "photo": "https://media.api-sports.io/football/players/546389.png"
+        },
+        {
+          "id": 470343,
+          "name": "A. Nylund",
+          "age": 17,
+          "number": 68,
+          "position": "Midfielder",
+          "photo": "https://media.api-sports.io/football/players/470343.png"
+        },
+        {
+          "id": 50861,
+          "name": "A. Ring",
+          "age": 34,
+          "number": 4,
+          "position": "Midfielder",
+          "photo": "https://media.api-sports.io/football/players/50861.png"
+        },
+        {
+          "id": 358422,
+          "name": "M. Ritari",
+          "age": 20,
+          "number": 14,
+          "position": "Midfielder",
+          "photo": "https://media.api-sports.io/football/players/358422.png"
+        },
+        {
+          "id": 560690,
+          "name": "J. De Nascimento",
+          "age": 16,
+          "number": 71,
+          "position": "Attacker",
+          "photo": "https://media.api-sports.io/football/players/560690.png"
+        },
+        {
+          "id": 361379,
+          "name": "D. Ezeh",
+          "age": 19,
+          "number": 19,
+          "position": "Attacker",
+          "photo": "https://media.api-sports.io/football/players/361379.png"
+        },
+        {
+          "id": 288326,
+          "name": "R. Hudd",
+          "age": 20,
+          "number": 11,
+          "position": "Attacker",
+          "photo": "https://media.api-sports.io/football/players/288326.png"
+        },
+        {
+          "id": 579122,
+          "name": "M. Kirilov",
+          "age": 18,
+          "number": 30,
+          "position": "Attacker",
+          "photo": "https://media.api-sports.io/football/players/579122.png"
+        },
+        {
+          "id": 55405,
+          "name": "L. Lappalainen",
+          "age": 27,
+          "number": 26,
+          "position": "Attacker",
+          "photo": "https://media.api-sports.io/football/players/55405.png"
+        },
+        {
+          "id": 444974,
+          "name": "T. Mero",
+          "age": 18,
+          "number": 97,
+          "position": "Attacker",
+          "photo": "https://media.api-sports.io/football/players/444974.png"
+        },
+        {
+          "id": 19085,
+          "name": "T. Pukki",
+          "age": 35,
+          "number": 20,
+          "position": "Attacker",
+          "photo": "https://media.api-sports.io/football/players/19085.png"
+        },
+        {
+          "id": 361422,
+          "name": "V. Vuorinen",
+          "age": 20,
+          "number": 91,
+          "position": "Attacker",
+          "photo": "https://media.api-sports.io/football/players/361422.png"
+        }
+      ]
+    }
+  ]
+}
