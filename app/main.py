@@ -16,6 +16,7 @@ st.set_page_config(
 )
 
 from app.views import team_page, match_page, schedule_page
+from data.overrides import load_raw_overrides
 
 PAGES = {
     "Otteluohjelma": schedule_page,
@@ -24,6 +25,8 @@ PAGES = {
 }
 
 # Allow schedule page to navigate directly to match analysis
+if "raw_overrides" not in st.session_state:
+    st.session_state["raw_overrides"] = load_raw_overrides()
 if "page" not in st.session_state:
     st.session_state["page"] = "Otteluohjelma"
 if "team_detail" not in st.session_state:

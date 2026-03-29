@@ -6,8 +6,8 @@ import streamlit as st
 import sys, os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 
-from app.data_loader import load_strengths_and_averages, load_teams_2026, load_squad, get_strength, load_strength_overrides
-from data.overrides import NAME_OVERRIDES, load_raw_overrides, save_raw_overrides, normalise
+from app.data_loader import load_strengths_and_averages, load_teams_2026, load_squad, get_strength, get_session_overrides
+from data.overrides import NAME_OVERRIDES, normalise
 from data.team_notes import TEAM_NOTES
 
 
@@ -34,7 +34,7 @@ def _render_overview():
     team_map = {t["id"]: NAME_OVERRIDES.get(t["id"], t["name"]) for t in teams}
 
     rows = []
-    for tid, s in load_strength_overrides().items():
+    for tid, s in get_session_overrides().items():
         name = team_map.get(tid, f"id={tid}")
         ratio = s["attack"] / s["defense"]
         rows.append((ratio, name, tid, s["attack"], s["defense"]))
@@ -47,7 +47,7 @@ def _render_overview():
         f"Hyökkäys- ja puolustuskertoimet on normalisoitu siten, että liigan keskiarvo = 1.00."
     )
 
-    raw = load_raw_overrides()
+    raw = st.session_state["raw_overrides"]
 
     st.subheader("Voimalukutaulukko")
     header = st.columns([0.4, 2.5, 1.8, 1.2, 1.2, 1.2, 1.5])
@@ -87,8 +87,7 @@ def _render_overview():
                 if st.form_submit_button("💾 Tallenna", type="primary"):
                     raw[tid]["attack"] = new_att
                     raw[tid]["defense"] = new_def
-                    save_raw_overrides(raw)
-                    st.cache_data.clear()
+                    st.session_state["raw_overrides"] = raw
                     st.session_state["editing_team"] = None
                     st.rerun()
         else:

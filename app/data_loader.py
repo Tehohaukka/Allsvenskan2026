@@ -35,10 +35,10 @@ def load_strengths_and_averages() -> tuple:
     return strengths, _AVG_HOME_OVERRIDE, _AVG_AWAY_OVERRIDE
 
 
-@st.cache_data(show_spinner=False)
-def load_strength_overrides() -> dict[int, dict]:
-    """Load and normalise team strength overrides from JSON."""
-    return normalise(load_raw_overrides())
+def get_session_overrides() -> dict[int, dict]:
+    """Return normalised overrides from the user's session (per-user, not cached globally)."""
+    raw = st.session_state.get("raw_overrides", load_raw_overrides())
+    return normalise(raw)
 
 
 @st.cache_data(ttl=3600, show_spinner=False)
@@ -67,7 +67,7 @@ def get_strength(strengths_df, team_id: int) -> dict:
             "scored": int(r["scored"]),
             "conceded": int(r["conceded"]),
         }
-    overrides = load_strength_overrides()
+    overrides = get_session_overrides()
     if team_id in overrides:
         base.update(overrides[team_id])
         base["overridden"] = True
