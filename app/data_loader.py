@@ -15,10 +15,9 @@ from config import VEIKKAUSLIIGA_ID, SEASON_2025, SEASON_2026
 from data.overrides import load_raw_overrides, normalise, NAME_OVERRIDES
 
 # Manual league average overrides (goals/game).
-# Based on 2025 home average (1.670) and home/away ratio 1.25,
-# reflecting the upward trend in VL scoring while assuming moderate home advantage.
-_AVG_HOME_OVERRIDE: float = 1.67
-_AVG_AWAY_OVERRIDE: float = 1.336
+# Maalikeskiarvo 3.1/ottelu, kotietu 1.05 (avg_home/avg_away).
+_AVG_HOME_OVERRIDE: float = 1.588
+_AVG_AWAY_OVERRIDE: float = 1.512
 
 
 @st.cache_data(ttl=3600, show_spinner=False)
