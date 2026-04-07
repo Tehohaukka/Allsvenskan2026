@@ -15,12 +15,13 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-from app.views import team_page, match_page, schedule_page
+from app.views import team_page, match_page, schedule_page, match_report_page
 from data.overrides import load_raw_overrides
 
 PAGES = {
     "Otteluohjelma": schedule_page,
     "Matsianalyysi": match_page,
+    "Otteluraportti": match_report_page,
     "Joukkueet": team_page,
 }
 

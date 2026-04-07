@@ -1,0 +1,92 @@
+{
+  "1164_650_2026-04-04": {
+    "xg_home": 1.13,
+    "xg_away": 0.01,
+    "lineup_home": {
+      "formation": "4-3-3",
+      "gk": ["Huuhtanen"],
+      "def": ["S. Saarinen", "Kuittinen", "J. Hämäläinen", "Niska"],
+      "mid": ["JP Laine", "Ahiabu", "Tuominen"],
+      "fwd": ["Essomba", "Conteh", "Salomaa"]
+    },
+    "lineup_away": {
+      "formation": "3-1-4-2",
+      "gk": ["Jalloh"],
+      "def": ["Okereke", "Haukioja", "Rönnberg"],
+      "mid": ["Daoussi", "P. Lima", "Räisänen", "Mane", "Turfkruier"],
+      "fwd": ["Muzinga", "van Duivenbooden"]
+    },
+    "subs_home": [
+      {"min": 61, "out": "Salomaa", "in": "Ulundu"},
+      {"min": 69, "out": "Conteh", "in": "Botué"},
+      {"min": 69, "out": "JP Laine", "in": "Kiiskilä"},
+      {"min": 69, "out": "S. Saarinen", "in": "Granlund"},
+      {"min": 88, "out": "Essomba", "in": "Huovila"}
+    ],
+    "subs_away": [
+      {"min": 66, "out": "Räisänen", "in": "Lindholm"},
+      {"min": 77, "out": "Muzinga", "in": "Keturi"},
+      {"min": 84, "out": "van Duivenbooden", "in": "Ali"}
+    ],
+    "notes": "Inter hallitsi ottelua täysin — 68 % pallonhallinta ja xG-ero 1.13–0.01 kertoo karun tarinan. VPS ei yksinkertaisesti luonut mitään maalintekotilanteita koko 90 minuutin aikana.\n\nOttelun selkein paikka jo 9. minuutilla: Seth Saarisen syöttö löysi hyvin ajoitetulle juoksulle lähteneen Alie Contehin pään, mutta Mamadou Jalloh venyi erinomaisella refleksitorjunnalla. Tuomisella oli lisäksi matala laukaus ennen puoliaikaa. Inter ei kuitenkaan onnistunut rakentamaan tilanteita, joissa maalintekijä olisi ollut täysin auki — VPS:n kompakti 5-4-1-blokki sulki tilat systemaattisesti.\n\n61. minuutilla Salomaa (Veikkausliiga-debyytissään) vaihdettiin Ulunduun. 69. minuutilla Inter teki näyttävän kolmoisvaihdon — Conteh, JP Laine ja Saarinen ulos, Botué, Kiiskilä ja Granlund sisään — hakien selvästi lisää dynamiikkaa hyökkäykseen. Paine kasvoi, mutta VPS:n puolustus ei rakoillut. VPS vastasi omilla vaihdoillaan pitääkseen rakenteen kasassa: Lindholm (66'), Keturi (77'), Ali (84').\n\nVPS:n taktinen suoritus oli tunnustuksen arvoinen: Haukioja johti kolmikkopuolustusta tiukasti, Daoussi suojasi eteen tehokkaana ankkurina, ja Jalloh oli varma maalilla. Valmentajan sanoin 'supertyytyväinen' piste Turusta — ja perustellusti.\n\n**Vedonlyönnillinen huomio:** Tulos 0–0 petti täysin xG:n lupauksen. Interin 1.13 xG kertoo, että joukkue loi kohtuullisen määrän painetta, mutta maalintekotilanteiden laatu jäi vaatimattomaksi — isolle osalle xG:stä riitti yksi torjunta. VPS:n 0.01 on käytännössä nolla: puolustus ei vuotanut lainkaan, eikä tulos ole sattumaa tässä mielessä. Inter on selvästi VPS:ää parempi joukkue, mutta tämä ottelu muistuttaa, ettei dominanssi automaattisesti tarkoita maaleja kompaktia puolustusta vastaan. Seuraavissa Inter-otteluissa kannattaa arvioida, miten vastustaja rakentaa puolustuksensa — VPS-tyyli sopii hyvin myös esim. Gnistanille."
+  },
+  "587_1168_2026-04-04": {
+    "xg_home": 0.66,
+    "xg_away": 1.10,
+    "lineup_home": {
+      "formation": "4-4-2",
+      "gk": ["Riikonen"],
+      "def": ["Nissinen", "Nurmi", "Lindgren", "Ngulube"],
+      "mid": ["van der Heyden", "Dosis", "Dahlström", "Huttunen"],
+      "fwd": ["Pearce", "Larsson"]
+    },
+    "lineup_away": {
+      "formation": "4-3-3",
+      "gk": ["Henriksson"],
+      "def": ["Karkulowski", "Hradecky", "Tsirigotis", "Talo"],
+      "mid": ["Könkkölä", "Sihvonen", "Zaal"],
+      "fwd": ["Ivanovic", "Ikonen", "Muzaci"]
+    },
+    "subs_home": [
+      {"min": 68, "out": "Ngulube", "in": "Stroud"},
+      {"min": 68, "out": "Huttunen", "in": "Patut"},
+      {"min": 78, "out": "Pearce", "in": "L. Andersson"},
+      {"min": 78, "out": "Dahlström", "in": "Hyvönen"}
+    ],
+    "subs_away": [
+      {"min": 63, "out": "Ikonen", "in": "Juvanteny"},
+      {"min": 63, "out": "Muzaci", "in": "Vauhkonen"},
+      {"min": 69, "out": "Sihvonen", "in": "Turkki"},
+      {"min": 81, "out": "Ivanovic", "in": "Kauppila"},
+      {"min": 81, "out": "Talo", "in": "Häggström"}
+    ],
+    "notes": "Tasapeli, joka kertoo kaksi eri tarinaa. Mariehamn johti puoliajalla vastaiskumaalilla, mutta ottelutilastot puhuivat TPS:n puolesta koko pelin ajan: 56 % pallonhallinta, 10 laukausta vastaan 2, 10 kulmapotkulähtöä vastaan 0. xG 1.10–0.66 on linjassa tilastojen kanssa.\n\nTPS prässäsi korkealta ja hallitsi avausjaksoa selvästi — peräti yhdeksän kulmapotkulähtöä ensimmäisellä puoliajalla, mutta niistä ei tullut maalia. Mariehamn puolusti tiiviisti 4-4-2:lla ja iski vastaiskussa: Adam Larsson viimeisteli 39. minuutilla 1–0.\n\nToisella puoliajalla TPS teki ratkaisevat vaihdot 63. minuutilla: Ikonen ja Muzaci ulos, Juvanteny ja Vauhkonen sisään. Juvanteny reagoi välittömästi — 77. minuutilla hän latoi Ivanovicin syötöstä kaukolaukauksen verkkoon, 1–1. TPS:n maalivahti Henriksson joutui tekemään vain yhden torjunnan koko ottelussa; Mariehamnin Riikonen neljä.\n\nMariehamn-kapteeni Larsson pettyi suoritukseen jälkeenpäin: \"Tämä ei ole tarpeeksi hyvää.\" Joukkue teki vain kaksi laukausta koko ottelussa, joista toinen meni maaliin — tehokkuus oli poikkeuksellista, mutta pelillinen sisältö ei vakuuta.\n\n**Vedonlyönnillinen huomio:** TPS oli selvästi aktiivisempi joukkue kaikilla mittareilla. Erityisesti Juvanteny vaihtopenkistä on tärkeä havainto — hän vaikutti välittömästi ja voi olla avainpelaaja TPS:n hyökkäyksessä jatkossa. Mariehamnin kyky luoda tilanteita omalla pelillä on kyseenalainen: kaksi laukausta kotona sarjakauden avauksessa on heikko suoritus."
+  },
+  "649_689_2026-04-04": {
+    "xg_home": 3.38,
+    "xg_away": 0.90,
+    "lineup_home": {
+      "formation": "4-3-3",
+      "gk": ["Markovic"],
+      "def": ["Lyons-Foster", "Bogicevic", "Tikkanen", "Montano"],
+      "mid": ["Mentu", "Ring", "Lingman"],
+      "fwd": ["Ezeh", "Pukki", "Borchers"]
+    },
+    "lineup_away": {
+      "formation": "4-3-3",
+      "gk": ["Paunio"],
+      "def": ["Moisio", "Yakubu", "Chukwudi", "Yussif"],
+      "mid": ["Tessilimi", "Boström", "Arsalo"],
+      "fwd": ["Djalo", "Streng", "Mastokangas"]
+    },
+    "subs_home": [
+      {"min": 66, "out": "Pukki", "in": "Mero"}
+    ],
+    "subs_away": [
+      {"min": 51, "out": "Arsalo", "in": "Paananen"},
+      {"min": 51, "out": "Streng", "in": "Rangel"},
+      {"min": 51, "out": "Mastokangas", "in": "Vesterbacka"}
+    ],
+    "notes": "HJK hallitsi ottelua täysin alusta loppuun. xG 3.38–0.90 kertoo selvästä ylivoimasta, ja tulos 3–0 oli ansaittu — maalit syntyivät selkeistä tilanteista, ei sattumalta.\n\nAvausmaali 36. minuutilla: Lingmanin kulmapotku, Ezeh ohjasi päällä maaliin lähialueelta. HJK:n 4-3-3 pyöri sujuvasti; Ring toimi pelinrakentajana, Lingman ja Mentu syöttelivät sivuilta. SJK:n hyökkääjät Djalo ja Streng jäivät koko ensimmäisen puoliajan ilman maalintekotilanteita — HJK:n Bogicevic–Tikkanen-parivaljakko piti linjan tiiviinä.\n\nPukki iski heti toisen puoliajan alussa (49'): Ringin matala syöttö sisään, Pukki viimeisteli yhdellä kosketuksella — 2–0. Käytännössä ratkaisu. SJK teki kolmoisvaihdon perään (n. 51'): Arsalo, Streng ja Mastokangas ulos, Paananen, Rangel ja Vesterbacka sisään. Muutos ei tuonut parannusta — SJK:n 0.90 xG kertoo, että paikkoja syntyi jonkin verran toisella puoliajalla, mutta ne olivat hajanaisia eikä Markovic joutunut todelliseen koetukseen.\n\nHJK vaihtoi 66. minuutilla: Pukki ulos, 18-vuotias Toivo Mero sisään liigadebyyttiin. Mero hyödynsi tilaisuutensa: kaukolaukaus 81. minuutilla löysi maalin, 3–0.\n\nErikoinen taustatekijä: Bolt Arenan fanikatsomoalue oli tyhjänä seuraamusrangaistuksen takia. Pelaajien keskinäinen kommunikointi kuului TV-lähetyksessä poikkeuksellisen selvästi.\n\n**Vedonlyönnillinen huomio:** HJK:n 3.38 xG on erittäin korkea luku — vahvistaa joukkueen aseman liigan ykkössuosikkina. Ezeh laidalla ja Pukki kärjessä ovat jo avausottelun perusteella terävässä vireessä. SJK:n 0.90 xG syntyi lähinnä toisella puoliajalla tilanteen ollessa jo selvä, joten lukua ei pidä yliarvostaa. SJK:n voimaluvut (att 1.069, def 1.008) näyttävät tämän perusteella jopa hieman yläkanttiin — puolustus antoi HJK:lle selvästi liikaa tilaa."
+  }
+}

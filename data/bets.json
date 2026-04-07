@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "date_placed": "2026-04-07",
+    "match": "HJK vs AC Oulu",
+    "market": "Over 3.25",
+    "bookmaker": "Pinnacle",
+    "odds": 1.961,
+    "model_prob": 0.532,
+    "stake_units": 5,
+    "closing_odds": null,
+    "result": null,
+    "profit_units": null,
+    "notes": "Pinnacle panosraja 404.23 EUR. Lyöty erittäin aikaisin (ti 7.4., matsi la 11.4.)."
+  }
+]

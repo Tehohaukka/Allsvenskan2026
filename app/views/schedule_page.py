@@ -12,8 +12,8 @@ from config import VEIKKAUSLIIGA_ID, SEASON_2026
 
 
 @st.cache_data(ttl=3600, show_spinner=False)
-def _load_fixtures():
-    fixtures = get_fixtures(VEIKKAUSLIIGA_ID, SEASON_2026)
+def _load_fixtures(force_refresh: bool = False):
+    fixtures = get_fixtures(VEIKKAUSLIIGA_ID, SEASON_2026, force_refresh=force_refresh)
     rounds = {}
     for f in fixtures:
         status = f["fixture"]["status"]["short"]
@@ -29,6 +29,7 @@ def _load_fixtures():
         if round_name not in rounds:
             rounds[round_name] = []
         rounds[round_name].append({
+            "fixture_id": f["fixture"]["id"],
             "date": date,
             "home": home,
             "away": away,
@@ -54,14 +55,26 @@ def render():
     with st.spinner("Ladataan otteluohjelma..."):
         rounds = _load_fixtures()
 
+    if st.sidebar.button("Päivitä otteluohjelma"):
+        _load_fixtures.clear()
+        rounds = _load_fixtures(force_refresh=True)
+        st.rerun()
+
     sorted_rounds = sorted(rounds.keys(), key=_round_number)
 
     # Filter controls
     col1, col2 = st.columns([2, 1])
     with col1:
-        show_played = st.toggle("Näytä pelatut ottelut", value=False)
+        show_played = st.toggle("Näytä pelatut ottelut", value=True)
     with col2:
         jump_to = st.selectbox("Hyppää kierrokselle", ["—"] + sorted_rounds, label_visibility="collapsed")
+
+    # Active round = first round with unplayed matches; fallback to last round
+    _active_round = next(
+        (r for r in sorted_rounds if any(m["status"] == "NS" or m["goals_home"] is None
+                                         for m in rounds[r])),
+        sorted_rounds[-1] if sorted_rounds else None,
+    )
 
     if jump_to != "—":
         sorted_rounds = [r for r in sorted_rounds if r == jump_to] + \
@@ -78,12 +91,12 @@ def render():
         date_str = dates[0] if len(dates) == 1 else f"{dates[0]} – {dates[-1]}"
         round_num = _round_number(round_name)
 
-        with st.expander(f"**Kierros {round_num}** — {date_str}", expanded=(round_num == 1)):
+        with st.expander(f"**Kierros {round_num}** — {date_str}", expanded=(round_name == _active_round)):
             for m in sorted(matches, key=lambda x: x["date"]):
                 if not show_played and m["status"] != "NS":
                     continue
 
-                col_date, col_match, col_btn = st.columns([1.2, 3, 1])
+                col_date, col_match, col_analysoi, col_raportti = st.columns([1.2, 3, 1, 1.2])
 
                 with col_date:
                     st.caption(m["date"])
@@ -95,12 +108,19 @@ def render():
                         score = f"{m['goals_home']}–{m['goals_away']}"
                         st.write(f"{m['home']} **{score}** {m['away']}")
 
-                with col_btn:
-                    if m["status"] == "NS":
-                        if st.button("Analysoi →", key=f"match_{m['home']}_{m['away']}_{m['date']}"):
-                            st.session_state["match_home"] = m["home"]
-                            st.session_state["match_away"] = m["away"]
-                            st.session_state["page"] = "Matsianalyysi"
+                with col_analysoi:
+                    if st.button("Analysoi →", key=f"match_{m['home']}_{m['away']}_{m['date']}"):
+                        st.session_state["match_home"] = m["home"]
+                        st.session_state["match_away"] = m["away"]
+                        st.session_state["page"] = "Matsianalyysi"
+                        st.rerun()
+
+                with col_raportti:
+                    played = m["status"] != "NS" or m["goals_home"] is not None
+                    if played:
+                        if st.button("Raportti →", key=f"report_{m['home']}_{m['away']}_{m['date']}"):
+                            st.session_state["report_fixture"] = m
+                            st.session_state["page"] = "Otteluraportti"
                             st.rerun()
                     else:
-                        st.caption("Pelattu")
+                        st.caption("Raportti", help="Saatavilla pelin jälkeen")
