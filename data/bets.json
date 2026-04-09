@@ -14,5 +14,21 @@
     "profit_units": null,
     "rationale": "Molemmat joukkueet ovat mallin mukaan liigan kärkipäätä hyökkäystehokkuudessa. HJK tuotti avauskierroksella 3.38 xG SJK:ta vastaan, Oulu 1.22 xG mutta viimeisteli peräti 5 maalia Gnistania vastaan. Malli antaa over 3.25:lle 53.2 % todennäköisyyden; Pinnacle avasi 1.961 (impl. 51.0 %). Edge noin +2.2 pp eli noin +4.3 % EV.",
     "notes": "Pinnacle panosraja 404.23 EUR. Lyöty erittäin aikaisin (ti 7.4., matsi la 11.4.)."
+  },
+  {
+    "id": 2,
+    "date_placed": "2026-04-09",
+    "match": "KuPS vs Gnistan",
+    "market": "Gnistan +1.5",
+    "bookmaker": "Coolbet",
+    "odds": 1.83,
+    "model_prob": 0.579,
+    "stake_units": 1,
+    "closing_odds": null,
+    "closing_no_vig_prob": null,
+    "result": null,
+    "profit_units": null,
+    "rationale": "Malli antaa Gnistan +1.5:lle 57.9 %, Coolbetin kerroin 1.83 implikoi 54.6 %, edge +6.0 % EV. KuPS:n kotixG on 2.18, joten tasoitus on kireä — KuPS voittaa yli 1.5 maalilla noin 42 % todennäköisyydellä. Gnistan on mallin mukaan puolustuksellisesti kohtuullinen. Softbook, panos maltillinen.",
+    "notes": ""
   }
 ]
