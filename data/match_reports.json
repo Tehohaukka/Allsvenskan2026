@@ -1,4 +1,98 @@
 {
+  "1163_1165_2026-04-04": {
+    "xg_home": 1.37,
+    "xg_away": 1.35,
+    "lineup_home": {
+      "formation": "4-4-2",
+      "gk": ["Virtanen"],
+      "def": ["Rale", "Väisänen", "Miettunen", "Bamba"],
+      "mid": ["Hytönen", "Multala", "Popovitch", "Stjopin"],
+      "fwd": ["Kanga", "Riski"]
+    },
+    "lineup_away": {
+      "formation": "4-2-3-1",
+      "gk": ["Kreidl"],
+      "def": ["Antwi", "Adams", "Hämäläinen", "Armah"],
+      "mid": ["Pennanen", "Gasc"],
+      "fwd": ["Kabuye", "Ruoppi", "Engvall", "Moreno"]
+    },
+    "subs_home": [
+      {"min": 21, "out": "Virtanen", "in": "Krkalic"},
+      {"min": 46, "out": "Bamba", "in": "Pettersson"},
+      {"min": 69, "out": "Multala", "in": "Raap"},
+      {"min": 69, "out": "Stjopin", "in": "Kilo"},
+      {"min": 84, "out": "Riski", "in": "Baranov"}
+    ],
+    "subs_away": [
+      {"min": 64, "out": "Engvall", "in": "Luyeye-Lutumba"},
+      {"min": 73, "out": "Kabuye", "in": "Kujasalo"},
+      {"min": 84, "out": "Armah", "in": "Savolainen"},
+      {"min": 84, "out": "Gasc", "in": "Heinonen"}
+    ],
+    "notes": "KuPS avasi mestaruuspuolustuksensa voitolla Tampereella 3–1. Tulos oli ansaittu, mutta xG 1.37–1.35 kertoo tasaisemmasta ottelusta kuin mitä pisteytys antaa ymmärtää — KuPS oli kliinisempi, ei ylivoimainen.\n\nAvausjakso alkoi KuPSin pallonhallinnalla, mutta ensimmäinen maalintekotilanne syntyi Ilvekselle: Jardell Kangan keskitys löysi maalinedustalta Teemu Hytösen, jonka jatkon Kreidl katkaisi. Tilanne kuitenkin hylättiin Multalan törmättyä maalivahtiin.\n\nKuPS iski 12. minuutilla: Bob Nii Armahin kova syöttö katkaistiin etutolpalta, mutta irtopallo tuli Petteri Pennaselle 14 metriin — yhdellä kosketuksella lähetetty laukaus löysi oikean kulman, 0–1.\n\n18. minuutilla Gascin laukaus tuotti Virtaselle torjunnan ja irtopallon tilanteen, jossa Ilves-maalivahti loukkasi kättään. Krkalic tuli tolppien väliin pakkovaihdossa — tämä sekoitti Ilveksen rakenteen kriittisellä hetkellä.\n\n43. minuutilla Jaime Moreno näytti luokkansa: pallo kimposi hänelle 20 metriin, ja hän lähetti vastustamattoman volleyn vasemman tolpan juureen, 0–2. Taito, ei tuuri.\n\nToisella puoliajalla Pettersson korvasi Bamban, mutta rakenne ei parantunut. 57. minuutilla Moreno olisi voinut tehdä hattutemput — Krkalic torjui oikeasta alakulmasta. Vain 15 sekuntia myöhemmin Armah leikkasi oikealta keskelle ja ampui vasemman jalan laukauksella vasempaan alakulmaan, 0–3.\n\nLisäajalla Ilves sai kunniaosumansa: Jesse Kilon pystysyöttö lähetti Hytösen läpi, joka sijoitti pallon etukulmaan — 1–3.\n\n**Vedonlyönnillinen huomio:** xG 1.37–1.35 paljastaa, että ottelu oli tilastollisesti lähes tasan — KuPS ei dominoinut tilanteiden luomisessa vaan voitti maalintekovireenä. Moreno on selvästi kliininen viimeistelijä (volley 43', ja olisi voinut tehdä hattutemput), Armah puolestaan tehokas myös maalintekijänä laidalta. Ilves loi riittävästi tilanteita mutta ei pystynyt hyödyntämään niitä, ja pakkovaihto maalissa jo 21. minuutilla heikensi rakennetta. Tulos 1–3 on siis harhaanjohtava: Ilves ei ollut niin huono kuin pisteytys antaa ymmärtää. KuPSin voima on tässä vaiheessa enemmän tehokkuudessa kuin ylivoimaisessa pelillisessä dominanssissa."
+  },
+  "2082_2077_2026-04-04": {
+    "xg_home": 1.33,
+    "xg_away": 1.22,
+    "lineup_home": {
+      "formation": "4-4-2",
+      "gk": ["Almeida"],
+      "def": ["Arko-Mensah", "Obileye", "Gnanou", "Costa"],
+      "mid": ["Latonen", "S. Eremenko", "Europeaus", "Hänninen"],
+      "fwd": ["Akinyemi", "R. Eremenko"]
+    },
+    "lineup_away": {
+      "formation": "4-4-2",
+      "gk": ["Santos"],
+      "def": ["Kaukua", "Pirinen", "Pitkänen", "Kemppainen"],
+      "mid": ["Kallio", "Mendolin", "Paananen", "Ghezali"],
+      "fwd": ["Körkkö", "Karjalainen"]
+    },
+    "subs_home": [
+      {"min": 56, "out": "Costa", "in": "Bjurström"},
+      {"min": 56, "out": "Hänninen", "in": "Hannula"},
+      {"min": 70, "out": "S. Eremenko", "in": "Atarah"},
+      {"min": 70, "out": "Latonen", "in": "Jouhi"}
+    ],
+    "subs_away": [
+      {"min": 72, "out": "Kallio", "in": "Silander"},
+      {"min": 82, "out": "Körkkö", "in": "Mäkeläinen"},
+      {"min": 90, "out": "Kemppainen", "in": "Sipola"},
+      {"min": 90, "out": "Pitkänen", "in": "Lietsa"}
+    ],
+    "notes": "AC Oulu murskasi Gnistanin vieraissa 5–1 ja lähetti välittömän viestin koko sarjalle: tämä ei ole sama Oulu kuin viime vuosina.\n\nGnistan iski ensin — S. Eremenko viimeisteli avausmaalin ja asetti lyhyen hetken ajaksi kysymyksen, onko Oulun Liigacup-vire oikeaa tasoa vai vain kupla. Vastaus tuli nopeasti ja selkeästi: Oulu takoi viisi maalia ja dominoi ottelua pelitavalla, jossa kaikki osa-alueet toimivat. Karjalainen ja Pirinen toivat puolustukseen ryhtiä, Santos oli varma maalilla, ja hyökkäys löysi maalin toistuvasti.\n\nGnistan teki 56. minuutilla tuplavaihdon (Costa ja Hänninen ulos) ja 70. minuutilla toisen (S. Eremenko ja Latonen ulos), mutta tulos oli käytännössä jo selvä. Oulu hallitsi loppuottelu ammattimaisesti ja teki myös omat rutiiivaihdot loppusuoralla.\n\n**Vedonlyönnillinen huomio:** xG 1.33–1.22 on avainluku — tilastollisesti ottelu oli lähes tasan, mutta tulos oli 5–1. Oulu oli poikkeuksellisen kliininen, Gnistan puolestaan tuhlaili. Tällainen xG-tulos-suhde on äärimmäinen ja lienee osin sattumaa; Oulun tehokkuus ei välttämättä toistu joka ottelussa. Gnistanin 1.33 xG kertoo, että joukkue loi tilanteita — se ei ollut täysin ylivoimaisen vastustajan leluina. Oulun voimalukuihin ei pidä vielä kirjata täyttä 5–1-painoa; tehokkuusluku pitää tasapainottaa xG:llä. Karjalainen ja Pirinen puolustuksessa ovat kuitenkin aito laadukas lisä, ja Oulu on selvästi paremmin rakennettu kuin kahtena edellisenä kautena."
+  },
+  "2075_1166_2026-04-04": {
+    "xg_home": 0.93,
+    "xg_away": 0.59,
+    "lineup_home": {
+      "formation": "4-5-1",
+      "gk": ["Vist"],
+      "def": ["Ness", "Brunell", "Ogungbaro", "Björnbäck"],
+      "mid": ["Skau", "Vidjeskog", "Harden", "Pedersen", "Sjögrell"],
+      "fwd": ["R. Vikström"]
+    },
+    "lineup_away": {
+      "formation": "4-3-3",
+      "gk": ["Maukonen"],
+      "def": ["Sans", "Muller", "Dantas", "Lehtonen"],
+      "mid": ["Andersson", "Cassubie", "Heikkinen"],
+      "fwd": ["Ferreira", "Barbosa", "Sarr"]
+    },
+    "subs_home": [
+      {"min": 29, "out": "Harden", "in": "Kass Kawo"},
+      {"min": 69, "out": "R. Vikström", "in": "J. Vikström"},
+      {"min": 69, "out": "Vidjeskog", "in": "Vuorinen"},
+      {"min": 78, "out": "Björnbäck", "in": "Myrevik"}
+    ],
+    "subs_away": [
+      {"min": 71, "out": "Ferreira", "in": "Montiel"},
+      {"min": 71, "out": "Heikkinen", "in": "Ojanen"},
+      {"min": 78, "out": "Lehtonen", "in": "Yapi"},
+      {"min": 84, "out": "Sarr", "in": "Inkinen"}
+    ],
+    "notes": "FC Lahti palasi Veikkausliigaan voitolla — vaatimaton esitys, mutta kolme pistettä on kolme pistettä. Jaro piti palloa enemmän, mutta xG 0.93–0.59 kertoo, ettei kumpikaan joukkue oikein pelannut kunnon maalintekotilanteita.\n\nOttelu oli tiivis ja tasainen avausjaksolla. Jaro piti palloa mutta Lahden kompakti 4-3-3-blokki ei antanut tilaa linjojen väliin. Lahti iski yhdellä laskelmoidulla vastaiskulla: 41. minuutilla pitkä pystysyöttö löysi Sarrin Jaron linjan taakse. Vitsin ja Nessin epäselvyys siitä, kumpi puolustaa tilanteen, jätti Sarrille vapaan hetken — hän nosti pallon Vitsin yli takakulmaan, 0–1.\n\nJaro teki 29. minuutilla jo varhaisen vaihdon: Harden ulos, Kass Kawo sisään. Toisella puoliajalla kotijoukkue painoi enemmän ja pystyi pelaamaan Lahden muodon sisään. 69. minuutilla tuplavaihto: molemmat Vikströmeistä vaihtuivat ja Vidjeskog jäi penkille.\n\nLahti hoiti kuitenkin voiton viimeiset 15 minuuttia ammattimaisesti — paljon katkoja, peli ei päässyt kulkemaan, ja Jaron loppukiri jäi vaimeaksi. Neljä vaihtoa viimeisten 20 minuutin aikana (Montiel, Ojanen, Yapi, Inkinen) vahvistivat selkeää pelin jäädyttämisstrategiaa.\n\n**Vedonlyönnillinen huomio:** Sarjanousija Lahti osoitti heti, että se osaa hallita ottelua tilanteen vaatiessa — defensiivinen rakenne oli ehjä ja 0.59 xG kertoo, ettei Jaro oikein saanut puolustusta auki. Jaron 0.93 xG syntyi enemmän hajautuneista tilanteista kuin selkeistä avautumisista. Tulos on herkkä yhdelle tilanteelle: Vitsin ja Nessin kommunikaatiovirhe ratkaisi ottelun. Kotietuna Jaro on vaarallisempi kuin tämä peli antoi ymmärtää, mutta pelillinen sisältö ei vakuuttanut."
+  },
   "1164_650_2026-04-04": {
     "xg_home": 1.13,
     "xg_away": 0.01,

@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "date_logged": "2026-03-29",
+    "competition": "Liigacup finaali",
+    "match": "Inter Turku vs AC Oulu",
+    "source": "Kossumikko",
+    "source_note": "Yksi maailman parhaista Veikkausliiga-analyytikkoja",
+    "market": "Over 2.5",
+    "odds": 1.90,
+    "their_prob": null,
+    "our_prob": null,
+    "outcome": "Voitto (Inter 1–0 AC Oulu)",
+    "notes": "Ei antanut prosentteja, arvioi 'hyvä kohde'. Myös Inter voitto 1X2 @ 2.05 'maistuva kohde'."
+  },
+  {
+    "id": 2,
+    "date_logged": "2026-04-04",
+    "competition": "Veikkausliiga 2026, kierros 1",
+    "match": "FF Jaro vs FC Lahti",
+    "source": "Wallaby79, ritchie, Trigger",
+    "source_note": null,
+    "market": "FC Lahti 1X2 / molemmat puolia Lahden taakse",
+    "odds": null,
+    "their_prob": null,
+    "our_prob": null,
+    "outcome": "Lahti voitti 0–1. Markkina kääntyi myös Lahden suosikiksi matsipäivänä.",
+    "notes": "Markkina piti aluksi Jaroa suosikkina. Nämä kolme kääntyivät Lahden puolelle ja raportoivat pelanneensa Lahden puolesta. Linjaliike vahvisti näkemyksen ennen ottelua."
+  },
+  {
+    "id": 3,
+    "date_logged": "2026-04-04",
+    "competition": "Veikkausliiga 2026, kierros 1",
+    "match": "Inter Turku vs VPS",
+    "source": "Kossumikko",
+    "source_note": "Yksi maailman parhaista Veikkausliiga-analyytikkoja",
+    "market": "Inter -1.25 aasialaisella tasoituksella",
+    "odds": null,
+    "their_prob": 0.58,
+    "our_prob": 0.53,
+    "outcome": "Inter 0–0 VPS. Tasoitus hävisi.",
+    "notes": "Kossumikko selvästi Inter-myönteinen; meidän malli implikoi ~53 %. 5 pp ero selittynee erilaisilla voimaluvuilla tai kotiedulla. Tulos 0-0 petti molemmat arviot."
+  }
+]

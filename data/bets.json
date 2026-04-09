@@ -7,10 +7,12 @@
     "bookmaker": "Pinnacle",
     "odds": 1.961,
     "model_prob": 0.532,
-    "stake_units": 5,
+    "stake_units": 2,
     "closing_odds": null,
+    "closing_no_vig_prob": null,
     "result": null,
     "profit_units": null,
+    "rationale": "Molemmat joukkueet ovat mallin mukaan liigan kärkipäätä hyökkäystehokkuudessa. HJK tuotti avauskierroksella 3.38 xG SJK:ta vastaan, Oulu 1.22 xG mutta viimeisteli peräti 5 maalia Gnistania vastaan. Malli antaa over 3.25:lle 53.2 % todennäköisyyden; Pinnacle avasi 1.961 (impl. 51.0 %). Edge noin +2.2 pp eli noin +4.3 % EV.",
     "notes": "Pinnacle panosraja 404.23 EUR. Lyöty erittäin aikaisin (ti 7.4., matsi la 11.4.)."
   }
 ]

@@ -55,11 +55,6 @@ def render():
     with st.spinner("Ladataan otteluohjelma..."):
         rounds = _load_fixtures()
 
-    if st.sidebar.button("Päivitä otteluohjelma"):
-        _load_fixtures.clear()
-        rounds = _load_fixtures(force_refresh=True)
-        st.rerun()
-
     sorted_rounds = sorted(rounds.keys(), key=_round_number)
 
     # Filter controls
