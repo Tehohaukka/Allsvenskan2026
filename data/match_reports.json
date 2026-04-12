@@ -156,6 +156,195 @@
     ],
     "notes": "Tasapeli, joka kertoo kaksi eri tarinaa. Mariehamn johti puoliajalla vastaiskumaalilla, mutta ottelutilastot puhuivat TPS:n puolesta koko pelin ajan: 56 % pallonhallinta, 10 laukausta vastaan 2, 10 kulmapotkulähtöä vastaan 0. xG 1.10–0.66 on linjassa tilastojen kanssa.\n\nTPS prässäsi korkealta ja hallitsi avausjaksoa selvästi — peräti yhdeksän kulmapotkulähtöä ensimmäisellä puoliajalla, mutta niistä ei tullut maalia. Mariehamn puolusti tiiviisti 4-4-2:lla ja iski vastaiskussa: Adam Larsson viimeisteli 39. minuutilla 1–0.\n\nToisella puoliajalla TPS teki ratkaisevat vaihdot 63. minuutilla: Ikonen ja Muzaci ulos, Juvanteny ja Vauhkonen sisään. Juvanteny reagoi välittömästi — 77. minuutilla hän latoi Ivanovicin syötöstä kaukolaukauksen verkkoon, 1–1. TPS:n maalivahti Henriksson joutui tekemään vain yhden torjunnan koko ottelussa; Mariehamnin Riikonen neljä.\n\nMariehamn-kapteeni Larsson pettyi suoritukseen jälkeenpäin: \"Tämä ei ole tarpeeksi hyvää.\" Joukkue teki vain kaksi laukausta koko ottelussa, joista toinen meni maaliin — tehokkuus oli poikkeuksellista, mutta pelillinen sisältö ei vakuuta.\n\n**Vedonlyönnillinen huomio:** TPS oli selvästi aktiivisempi joukkue kaikilla mittareilla. Erityisesti Juvanteny vaihtopenkistä on tärkeä havainto — hän vaikutti välittömästi ja voi olla avainpelaaja TPS:n hyökkäyksessä jatkossa. Mariehamnin kyky luoda tilanteita omalla pelillä on kyseenalainen: kaksi laukausta kotona sarjakauden avauksessa on heikko suoritus."
   },
+  "1168_1166_2026-04-10": {
+    "xg_home": 1.73,
+    "xg_away": 1.82,
+    "lineup_home": {
+      "formation": "3-4-3",
+      "gk": ["Henriksson"],
+      "def": ["Häggström", "Hradecky", "Turkki"],
+      "mid": ["Talo", "Zaal", "Könkkölä", "Ikonen"],
+      "fwd": ["Muzaci", "Tsirigotis", "Ivanovic"]
+    },
+    "lineup_away": {
+      "formation": "4-4-2",
+      "gk": ["Maukonen"],
+      "def": ["Lehtonen", "Dantas", "Muller", "Sans"],
+      "mid": ["Heikkinen", "Cassubie", "Neemias", "Andersson"],
+      "fwd": ["Sarr", "Martim Augusto"]
+    },
+    "subs_home": [
+      {"min": 67, "out": "Ikonen", "in": "Juvanteny"},
+      {"min": 75, "out": "Häggström", "in": "Karkulowski"},
+      {"min": 75, "out": "Könkkölä", "in": "Vauhkonen"},
+      {"min": 90, "out": "Turkki", "in": "Sihvonen"}
+    ],
+    "subs_away": [
+      {"min": 58, "out": "Lehtonen", "in": "Yapi"},
+      {"min": 58, "out": "Heikkinen", "in": "Montiel"},
+      {"min": 58, "out": "Martim Augusto", "in": "Ojanen"},
+      {"min": 72, "out": "Andersson", "in": "Koskinen"},
+      {"min": 78, "out": "Cassubie", "in": "Kabashi"}
+    ],
+    "notes": "TPS vei kotiavauksensa 2–1, mutta xG 1.73–1.82 kertoo, ettei voitto ollut pelillisesti ansaittu — Lahti loi kokonaisuutena enemmän ja laadukkaampia tilanteita.\n\nTPS aloitti terävästi: Könkkölä kuljetti pallon Lahden päätyyn heti ensimmäisellä minuutilla, ja 5. minuutilla Muzaci pääsi rangaistusalueelle mutta kompuroi ratkaisevalla hetkellä. Lahti vastasi tasavertaisesti — Andersson murtautui boksiin 12. minuutilla (Henriksson torjui), ja 26. minuutilla Sans ja Andersson rakensivat vaarallisen hyökkäyksen, joka päättyi Anderssonin niukasti ohi menneeseen ohjaukseen. Sarrin napakka laukaus 33. minuutilla liukui niukasti ohi vasemman alakulman.\n\nMaaliton tasapeli kesti 43 minuuttia, kunnes kulmapotkun jälkitilanteesta pallo jäi pomppimaan rangaistusalueelle ja Tsirigotis puskisi sen verkkoon — 1–0 tauolle.\n\nToisen jakson alku oli TPS:lle tuhoisaa Lahden kannalta: 50. minuutilla Tsirigotis karkasi vastahyökkäykseen ja tarjoili rinnalle nousseelle Könkkölälle, joka viimeisteli varmasti 2–0.\n\nLahti reagoi 58. minuutilla kolmoisvaihdolla: Lehtonen, Heikkinen ja Martim Augusto ulos, sisään Yapi, Montiel ja Ojanen. Painostus tuotti tulosta 75. minuutilla: Montiel nosti pallon maalille, Henriksson ei saanut puhdasta otetta, ja Sarr oli ensimmäisenä irtopallossa — 2–1.\n\nLoppuhetket olivat kuumia. 85. minuutilla Zaal osui tolppaan ja Maukonen torjui jatkotilanteen upeasti yläkulmasta. Toisaalta Lahti haki tasoitusta vimmatusti: Sansin vapaapotkusta Neemias puskisi, mutta Henriksson venyi torjuntaan. Lisäajalla Yapi tarjoili maalille, mutta Ojasen pusku meni ohi.\n\n**Vedonlyönnillinen huomio:** xG 1.73–1.82 Lahden eduksi häviöstä huolimatta on keskeinen havainto. TPS:n kaksi maalia syntyivät kulmapotkun jälkitilanteesta ja yksittäisestä vastahyökkäyksestä — molemmat olivat tehokkaasti hyödynnettyjä, mutta eivät systemaattisen paineen tulosta. Tsirigotis (8.3 Flashscore) oli ratkaisija: maali + syöttö, ja hän on selvästi joukkueen vaarallisin pelaaja. TPS:n siirtyminen 3-4-3-muotoon (kierros 1: 4-3-3 vieraissa) oli tietoinen valinta kotona — leveämpi hyökkäys mutta riskialttiimpi takaa. Lahden Maukonen (4 torjuntaa) piti joukkueen pelissä pitkään. Lahti loi avoimesta pelistä enemmän kuin TPS — kolmoisvaihto 58. minuutilla oli rohkea ja tuotti kavennuksen. TPS on säädönkin jälkeen rankingimme heikoin joukkue — tämä voitto syntyi tehokkuudesta ja Tsirigotiksen yksilösuorituksista, ei pelillisestä ylivoimasta. xG-tappio kotona Lahtea vastaan vahvistaa, ettei voimalukuja pidä ylikorjata yhden tuloksen perusteella."
+  },
+  "1164_1163_2026-04-11": {
+    "xg_home": 0.87,
+    "xg_away": 1.54,
+    "lineup_home": {
+      "formation": "4-3-3",
+      "gk": ["Huuhtanen"],
+      "def": ["Granlund", "Kuittinen", "Kangasniemi", "Niska"],
+      "mid": ["Tuominen", "Ahiabu", "Kiiskilä"],
+      "fwd": ["Essomba", "Botué", "Ulundu"]
+    },
+    "lineup_away": {
+      "formation": "4-3-3",
+      "gk": ["Krkalic"],
+      "def": ["Rale", "Raap", "Väisänen", "Pettersson"],
+      "mid": ["Hytönen", "Kilo", "Popovitch"],
+      "fwd": ["Wallius", "Riski", "Stjopin"]
+    },
+    "subs_home": [
+      {"min": 58, "out": "Tuominen", "in": "Yli-Kokko"},
+      {"min": 58, "out": "Botué", "in": "Conteh"},
+      {"min": 58, "out": "Ulundu", "in": "Salomaa"},
+      {"min": 72, "out": "Kiiskilä", "in": "Laine"},
+      {"min": 90, "out": "Essomba", "in": "Huovila"}
+    ],
+    "subs_away": [
+      {"min": 63, "out": "Raap", "in": "Tiitinen"},
+      {"min": 64, "out": "Riski", "in": "Baranov"},
+      {"min": 90, "out": "Väisänen", "in": "Miettunen"}
+    ],
+    "notes": "Interin ja Ilveksen kärkikamppailu päättyi dramaattisesti Interin 2–1-voittoon lisäajan maalilla, mutta xG 0.87–1.54 kertoo, että Ilves oli pelillisesti parempi joukkue.\n\nIlves meni johtoon ensimmäisellä jaksolla rangaistuspotkulla — erotuomari Al-Emara tulkitsi Ulundun kontaktin pilkun arvoiseksi, ja Riski laukoi varmasti. Tilanne jakoi mielipiteitä. Toisessa suunnassa Raapin käsikosketus Ilveksen boksissa jäi viheltämättä — pallo kimposi kropasta, eikä tahallista käsipeliä tulkittu.\n\nInter teki kolmoisvaihdon 58. minuutilla: Tuominen, Botué ja Ulundu ulos, sisään Yli-Kokko, Conteh ja Salomaa. Muutos toi hyökkäykseen lisää suoruutta. 74. minuutilla Essomba pohjusti ja Conteh viimeisteli ensimmäisen Veikkausliiga-maalinsa — 1–1.\n\nPeli näytti päättyvän tasapeliin, mutta 90+6. minuutilla 18-vuotias keskuspuolustaja Kangasniemi (9.1 Flashscore) nousi erikoistilanteesta ja puskisi voittomaalin omista korkeuksistaan. Ilves ei onnistunut vartioimaan pitkää topparia.\n\n**Vedonlyönnillinen huomio:** xG 0.87–1.54 Ilveksen eduksi on merkittävä ero — Inter voitti ottelun, jossa se oli pelillisesti altavastaaja. Ilves on nyt hävinnyt kaksi peliä, joissa xG on ollut molemmissa lähellä vastustajaa tai edellä (kierros 1: xG 1.37–1.35, tappio 1–3). Tämä viittaa viimeistelyongelmaan tai huonoon tuuriin — Ilveksen voimaluvut eivät ehkä vaadi korjausta alaspäin tulosten perusteella. Interin kolmoisvaihto 58. minuutilla oli ratkaiseva: Conteh toi välitöntä vaikutusta. Kangasniemen nousu vakiokokoonpanoon keskuspuolustukseen on seurattava kehityskaari."
+  },
+  "649_2077_2026-04-11": {
+    "xg_home": 1.34,
+    "xg_away": 0.91,
+    "lineup_home": {
+      "formation": "4-2-3-1",
+      "gk": ["Markovic"],
+      "def": ["Lyons-Foster", "Bogicevic", "Tikkanen", "Montano"],
+      "mid": ["Ring", "Lingman"],
+      "fwd": ["Ezeh", "Pukki", "Mentu", "Borchers"]
+    },
+    "lineup_away": {
+      "formation": "4-4-2",
+      "gk": ["Santos"],
+      "def": ["Kaukua", "Pirinen", "Pitkänen", "Kemppainen"],
+      "mid": ["Kallio", "Mendolin", "Paananen", "Ghezali"],
+      "fwd": ["Korkko", "Karjalainen"]
+    },
+    "subs_home": [
+      {"min": 58, "out": "Lyons-Foster", "in": "Ylitolva"},
+      {"min": 58, "out": "Borchers", "in": "Mero"},
+      {"min": 67, "out": "Ezeh", "in": "Cicale"},
+      {"min": 68, "out": "Ring", "in": "Kirilov"},
+      {"min": 88, "out": "Mentu", "in": "Moller"}
+    ],
+    "subs_away": [
+      {"min": 65, "out": "Ghezali", "in": "Silander"},
+      {"min": 80, "out": "Korkko", "in": "Jokelainen"},
+      {"min": 88, "out": "Mendolin", "in": "?"}
+    ],
+    "notes": "HJK kärsi yllätystappion kotona AC Oululle, joka haki jo toisen vierasvoiton pääkaupunkiseudulta kahdessa pelissä. xG 1.34–0.91 viittaa HJK:n pienoiseen pelilliseen yliotteeseen, mutta Oulullakin oli omat tilanteensa — ja niistä yksi meni sisään.\n\nHJK loi ensimmäisen paikan aikaisin: Lingman siirsi boksin reunalla Ezehille, mutta Pitkänen (7.7 Flashscore) ehti blokkaamaan liu'ullaan. Pitkänen oli koko ottelun paras pelaaja ja avain Oulun puolustuksen kestävyyteen.\n\nOulu iski kahdesti ennen puoliaikaa. Ensin Kallio laukoi boksin ulkopuolelta ylärimaan — senttejä maalista. Sitten juuri ennen 30. minuuttia keskitys oikealta löysi taka-alueelta vapaaksi jääneen Kallion, joka otti pallon haltuun ja sijoitti alakulmaan — 0–1.\n\nToinen jakso oli lähes kokonaan HJK:n hallintaa: pallo pysyi Oulun kenttäpuoliskolla, mutta hyökkäykset kuivuivat viimeiseen syöttöön. HJK teki viisi vaihtoa (58'–88') hakiessaan tasoitusta — Mero tuli Borchersin tilalle, Cicale Ezehin, Kirilov Ringin — mutta mikään ei tuonut läpimurtoa. Loppuhetket olivat kovaa painetta, mutta viimeistelyt eivät osuneet kehykseen.\n\nOulu puolustautui organisoidusti ja hoiti voiton ammattimaisesti loppuun. Santos oli varma maalilla, Pirinen ja Pitkänen hallitsivat keskusalueen.\n\n**Vedonlyönnillinen huomio:** HJK:n xG 1.34 kotona on pettymys — avauskierroksen 3.38 xG SJK:ta vastaan ei toistunut. Oulu osoitti, että vierasvoitto Gnistanista (5–1) ei ollut pelkkä tehokkuuspiikki: puolustus on aidosti parantunut. Pitkäsen ja Pirisen keskuspuolustus on liigan parhaimmistoa. Over 3.25 -veto hävisi odotetusti xG:n valossa — yhteensä 2.25 jäi kauas linjasta. HJK:n hyökkäys näytti hampaattomalta organisoitua puolustusta vastaan, mikä on tärkeä havainto jatkoon."
+  },
+  "1165_2082_2026-04-11": {
+    "xg_home": 2.21,
+    "xg_away": 0.94,
+    "lineup_home": {
+      "formation": "4-2-3-1",
+      "gk": ["Kreidl"],
+      "def": ["Armah", "Hämäläinen", "Adams", "Antwi"],
+      "mid": ["Gasc", "Engvall"],
+      "fwd": ["Ruoppi", "Moreno", "Pennanen", "Kabuye"]
+    },
+    "lineup_away": {
+      "formation": "5-4-1",
+      "gk": ["Bjurström"],
+      "def": ["Arko-Mensah", "Ojala", "Obileye", "Gnanou", "Ramilson"],
+      "mid": ["Europaeus", "Hannula", "S. Eremenko", "R. Eremenko"],
+      "fwd": ["Perez"]
+    },
+    "subs_home": [
+      {"min": 35, "out": "Kabuye", "in": "Kujasalo"},
+      {"min": 58, "out": "Engvall", "in": "Savolainen"},
+      {"min": 78, "out": "Armah", "in": "Luyeye-Lutumba"},
+      {"min": 79, "out": "Kujasalo", "in": "Heiskanen"}
+    ],
+    "subs_away": [
+      {"min": 67, "out": "Perez", "in": "Akinyemi"},
+      {"min": 79, "out": "Hannula", "in": "Atarah"},
+      {"min": 88, "out": "Ojala", "in": "Marcelo Costa"},
+      {"min": 88, "out": "S. Eremenko", "in": "Latonen"},
+      {"min": 88, "out": "Bjurström", "in": "Jouhi"}
+    ],
+    "notes": "KuPS avasi kotikauden niukalla 1–0-voitolla, mutta xG 2.21–0.94 kertoo selkeämmästä ylivoimasta kuin mitä tulos antaa ymmärtää. Gnistan puolustautui kurinalaisesti matalassa blokissa ja pakotti KuPSin kärsivälliseen hyökkäysrakentamiseen.\n\nKuPS hallitsi palloa ja haki ratkaisuja laitojen kautta, mutta Gnistanin 5-4-1-muoto sulki keskustan tehokkaasti. Viimeiset ratkaisut jäivät vajaiksi — syöttöjä boksiin tuli, mutta viimeistely ei toiminut. Kabuye loukkaantui jo 35. minuutilla ja Kujasalo tuli tilalle.\n\nToisella jaksolla peli aukesi hetkittäin molempiin suuntiin. Gnistan pääsi muutamaan vaaralliseen vastahyökkäykseen, ja xG 0.94 kertoo, etteivät vieraat olleet vain puolustamassa. Engvallin vaihto Savolaiseen (58') toi KuPSille lisää energiaa.\n\nRatkaisu syntyi 81. minuutilla erikoistilanteesta: kulmapotkun jälkitilanteessa Savolainen syötti ja Moreno viimeisteli kauden toisen osumansa. Gnistan ei enää ehtinyt reagoida, vaikka teki kolme vaihtoa 88. minuutilla.\n\n**Vedonlyönnillinen huomio:** xG 2.21–0.94 vastaa kalibroitua malliamme hyvin (xG-ennuste oli 2.36–0.93). KuPS dominoi tilastoissa mutta tarvitsi erikoistilanteen murtautuakseen matalasta blokista — avoimesta pelistä maalinteko oli vaikeaa. Gnistanin 5-4-1 oli taktisesti onnistunut valinta: vierasottelun xG 0.94 on kohtuullinen sarjan kärkijoukkuetta vastaan. Gnistan pelasi selvästi vajaalla kokoonpanolla, erityisesti hyökkäyksessä: avauskierroksen aloittaneet Akinyemi ja R. Eremenko olivat molemmat penkillä, ja kärjessä aloitti Perez, joka vaihdettiin pois 67. minuutilla. Myös maalilla Bjurström Almeidan tilalla. Tämä huomioitiin kalibroinnissa — Gnistanin voimalukuja ei heikennetty täysimääräisesti tämän ottelun perusteella."
+  },
+  "650_2075_2026-04-10": {
+    "xg_home": 0.86,
+    "xg_away": 1.83,
+    "lineup_home": {
+      "formation": "3-4-1-2",
+      "gk": ["Jalloh"],
+      "def": ["Okereke", "Haukioja", "Rönnberg"],
+      "mid": ["Mane", "Daoussi", "Lima", "Turfkruier"],
+      "fwd": ["Lindholm", "van Duivenbooden", "Muzinga"]
+    },
+    "lineup_away": {
+      "formation": "3-4-3",
+      "gk": ["Vits"],
+      "def": ["Bjönbäck", "Ogungbaro", "Brunell"],
+      "mid": ["Gunnarsson", "Vuorinen", "Ness", "Skau"],
+      "fwd": ["Pedersen", "Vikström", "Sjögrell"]
+    },
+    "subs_home": [
+      {"min": 69, "out": "Lindholm", "in": "Vahtera"},
+      {"min": 69, "out": "van Duivenbooden", "in": "Ali"},
+      {"min": 90, "out": "Muzinga", "in": "Keturi"}
+    ],
+    "subs_away": [
+      {"min": 60, "out": "Vikström", "in": "Zetterström"},
+      {"min": 60, "out": "Vuorinen", "in": "Kass Kawo"},
+      {"min": 72, "out": "Bjönbäck", "in": "Myrevik"},
+      {"min": 90, "out": "Gunnarsson", "in": "Vidjeskog"}
+    ],
+    "notes": "Pohjanmaan derby päättyi maalittomaan, mutta xG 0.86–1.83 kertoo selkeästi Jaron eduksi — vieraat olivat lähempänä voittoa kuin tasapeli antaa ymmärtää.\n\nJaro aloitti aktiivisesti: jo 3. minuutilla Nessin keskitys löysi Vikströmin VPS-toppareiden välistä, mutta viimeistely jäi puolittaiseksi. Pedersenin kulmapotku löysi Sjögrellin takatolpalta, mutta pallo pysähtyi puolustajaan. VPS:llä oli oma kauhun hetkensä 15. minuutin kohdalla, kun Vits harhautti hyökkääjän mutta avasi suoraan Ogungbaroon — kimmoketilanteesta Muzingalla oli avopaikka, mutta Vits paikkasi hienolla torjunnalla.\n\n20. minuutilla Vuorinen riisti pallon Okerekeltä ja Vikström pääsi avopaikkaan, mutta ensikosketus petti ja Jalloh ehti peittää. Puolen tunnin kohdalla Sjögrellin kaukolaukaus suuntautui suoraan Jallohiin.\n\nToisen puoliajan alku oli Jaron: 49. minuutilla Ness syötti maata pitkin rangaistusalueelle Pedersenille, jonka laukaus kimposi Okerekestä ja kiersi senttien päässä takatolpan ohitse. 59. minuutilla Ogungbaro laukoi kulmapotkun jälkitilanteesta, mutta pallo osui VPS-puolustukseen. Pian perään Sjögrell pääsi puolittaiseen läpiajoon — Jalloh torjui jaloillaan, ja Pedersenin jatkolaukauksen blokkasi puolustus maaliviivalla.\n\nLoppuhetkillä Jaro pelasi pitkän hyökkäyksen, jonka päätteeksi Sjögrell keskitti ja Myrevik pääsi puskemaan, mutta suoraan Jallohin syliin.\n\n**Vedonlyönnillinen huomio:** xG 0.86–1.83 vahvistaa Jaron pelillistä yliotetta — vieraat loivat selkeästi enemmän ja laadukkaampia tilanteita. VPS:n Jalloh (8.0) piti kotijoukkueen pelissä useilla avaintorjunnoilla. Jaro ei ole vieläkään tehnyt maalia tällä kaudella (kaksi peliä, 0 maalia, xG yhteensä noin 2.8), mikä viittaa viimeistelyongelmaan — Vikströmin ja Sjögrellin maalipaikkoja ei hyödynnetä. VPS:n siirtyminen 3-4-1-2-muotoon (kierros 1: 3-1-4-2) ei tuonut hyökkäykseen lisää: 0.86 xG kotona sarjan heikoimman joukkueen rankingin joukkuetta vastaan on vaatimaton. Under-linja oli watchlistillä ideana mutta jäi pelaamatta — xG 2.69 yhteensä kertoo, ettei peli ollut niin matalaodotteinen kuin 0–0-tulos antaa ymmärtää."
+  },
+  "689_587_2026-04-10": {
+    "xg_home": 1.69,
+    "xg_away": 0.40,
+    "lineup_home": {
+      "formation": "4-4-2",
+      "gk": ["Paunio"],
+      "def": ["Yussif", "Pires", "Chukwudi", "Kekarainen"],
+      "mid": ["Vaisto", "Boström", "Arsalo", "Vesterbacka"],
+      "fwd": ["Paananen", "Rangel"]
+    },
+    "lineup_away": {
+      "formation": "4-3-1-2",
+      "gk": ["Riikonen"],
+      "def": ["Ngulube", "Patut", "Nurmi", "Nissinen"],
+      "mid": ["Lindgren", "Dosis", "Dahlström"],
+      "fwd": ["van der Heyden", "Pearce", "Larsson"]
+    },
+    "subs_home": [
+      {"min": 64, "out": "Rangel", "in": "Streng"},
+      {"min": 64, "out": "Vesterbacka", "in": "Bulgakov"},
+      {"min": 75, "out": "Kekarainen", "in": "Caio Araujo"},
+      {"min": 83, "out": "Boström", "in": "Padera"},
+      {"min": 83, "out": "Paananen", "in": "Mastokangas"}
+    ],
+    "subs_away": [
+      {"min": 61, "out": "Dosis", "in": "Hyvönen"},
+      {"min": 61, "out": "Pearce", "in": "Andersson"},
+      {"min": 72, "out": "Larsson", "in": "Lundberg"},
+      {"min": 72, "out": "Dahlström", "in": "Huttunen"},
+      {"min": 81, "out": "van der Heyden", "in": "Holmberg"}
+    ],
+    "notes": "SJK hallitsi kotiavaustaan alusta loppuun — xG 1.69–0.40 kertoo ylivoimasta, joka näkyi myös kentällä. Mariehamn ei koskaan päässyt otteluun.\n\nSJK otti pallonhallinnan ja prässäsi korkealta heti alusta. Avausmaali syntyi 29. minuutilla erikoistilanteesta: Paananen toimitti kulmapotkun tarkasti maalille, ja Pires puskisi kotijoukkueen johtoon. Mariehamn ei pystynyt vastaamaan omalla pelillään — puolustus antoi SJK:lle liikaa tilaa ja pallonkierrätys katkesi toistuvasti keskikentällä.\n\nToisen puoliajan alku oli Mariehamnin paras hetki: 47. minuutilla Larsson pääsi läpiajoon, mutta Paunio tuli varmasti vastaan ja torjui. Se jäi vierasjoukkueen ainoaksi todelliseksi maalipaikaksi.\n\n51. minuutilla Yussif (9.0 Flashscore) näytti luokkansa: hän kuljetti pallon usean pelaajan välistä rangaistusalueen rajalle ja syötti Paanaselle, joka sijoitti vasempaan ylänurkkaan — 2–0. Yussif oli koko ottelun paras pelaaja, ja hänen roolinsa vasempana laitapuolustajana tuottaa SJK:lle merkittävää hyökkäyslisäarvoa.\n\nMariehamn teki viisi vaihtoa (61'–81'), mutta mikään ei muuttanut pelin luonnetta. SJK sinetöi voiton 90. minuutilla toisella erikoistilannemaalilla: Mastokangas — vaihdosta sisään 83. minuutilla — toimitti kulmapotkun, ja Streng puski 3–0.\n\n**Vedonlyönnillinen huomio:** xG 1.69–0.40 vastaa tulosta hyvin — tämä ei ollut onnekas voitto vaan aito pelillinen dominanssi. Kolmesta maalista kaksi syntyi kulmapotkuista, mikä korostaa SJK:n erikoistilanneosaamista — tämä on huomionarvoista jatkossa. Mariehamnin 0.40 xG vieraissa on huolestuttavan matala, ja yhdessä avauskierroksen kotipelin kanssa (kaksi laukausta TPS:ää vastaan) vahvistaa kuvaa joukkueesta, joka ei pysty luomaan maalintekotilanteita avoimesta pelistä. Voimalukusäätö Mariehamn alaspäin tuntuu perustellulta."
+  },
   "649_689_2026-04-04": {
     "xg_home": 3.38,
     "xg_away": 0.90,

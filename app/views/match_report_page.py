@@ -79,8 +79,6 @@ def render():
     if notes:
         st.subheader("Raportti")
         st.markdown(_safe_md(notes), unsafe_allow_html=True)
-        with st.expander("Muokkaa raporttia"):
-            _notes_form(key, notes)
     else:
         st.subheader("Raportti")
         _notes_form(key, notes)

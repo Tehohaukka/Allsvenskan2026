@@ -1,62 +1,62 @@
 {
   "649": {
     "name": "HJK Helsinki",
-    "attack": 1.494,
-    "defense": 0.758
+    "attack": 1.527,
+    "defense": 0.797
   },
   "1164": {
     "name": "Inter Turku",
-    "attack": 1.384,
-    "defense": 0.726
+    "attack": 1.374,
+    "defense": 0.721
   },
   "1163": {
     "name": "Ilves",
-    "attack": 1.249,
-    "defense": 0.750
+    "attack": 1.24,
+    "defense": 0.745
   },
   "1165": {
     "name": "KuPS",
-    "attack": 1.340,
-    "defense": 0.745
+    "attack": 1.41,
+    "defense": 0.74
   },
   "2077": {
     "name": "AC Oulu",
-    "attack": 1.110,
-    "defense": 0.962
+    "attack": 1.167,
+    "defense": 0.95
   },
   "689": {
     "name": "SJK",
-    "attack": 1.069,
-    "defense": 1.008
+    "attack": 1.131,
+    "defense": 1.001
   },
   "2082": {
     "name": "Gnistan",
-    "attack": 0.834,
-    "defense": 1.023
+    "attack": 0.828,
+    "defense": 1.055
   },
   "650": {
     "name": "VPS",
-    "attack": 0.793,
-    "defense": 1.058
+    "attack": 0.788,
+    "defense": 1.05
   },
   "587": {
     "name": "IFK Mariehamn",
-    "attack": 0.745,
-    "defense": 1.132
+    "attack": 0.715,
+    "defense": 1.149
   },
   "1166": {
     "name": "Lahti",
-    "attack": 0.727,
-    "defense": 1.185
+    "attack": 0.712,
+    "defense": 1.186
   },
   "2075": {
     "name": "FF Jaro",
-    "attack": 0.672,
-    "defense": 1.254
+    "attack": 0.668,
+    "defense": 1.245
   },
   "1168": {
     "name": "TPS",
-    "attack": 0.582,
-    "defense": 1.400
+    "attack": 0.642,
+    "defense": 1.324
   }
 }
