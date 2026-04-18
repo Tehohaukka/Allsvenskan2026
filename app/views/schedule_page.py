@@ -9,20 +9,21 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../.
 
 from api.football_api import get_fixtures
 from config import VEIKKAUSLIIGA_ID, SEASON_2026
+from data.overrides import NAME_OVERRIDES
 
 
 @st.cache_data(ttl=3600, show_spinner=False)
-def _load_fixtures(force_refresh: bool = False):
-    fixtures = get_fixtures(VEIKKAUSLIIGA_ID, SEASON_2026, force_refresh=force_refresh)
+def _load_fixtures():
+    fixtures = get_fixtures(VEIKKAUSLIIGA_ID, SEASON_2026)
     rounds = {}
     for f in fixtures:
         status = f["fixture"]["status"]["short"]
         round_name = f["league"]["round"]
         date = f["fixture"]["date"][:10]
-        home = f["teams"]["home"]["name"]
-        away = f["teams"]["away"]["name"]
         home_id = f["teams"]["home"]["id"]
         away_id = f["teams"]["away"]["id"]
+        home = NAME_OVERRIDES.get(home_id, f["teams"]["home"]["name"])
+        away = NAME_OVERRIDES.get(away_id, f["teams"]["away"]["name"])
         goals_home = f["goals"]["home"]
         goals_away = f["goals"]["away"]
 
@@ -52,17 +53,26 @@ def _round_number(round_name: str) -> int:
 def render():
     st.title("Otteluohjelma 2026")
 
+    col_title, col_refresh = st.columns([5, 1])
+    with col_refresh:
+        if st.button("🔄 Päivitä"):
+            _load_fixtures.clear()
+
     with st.spinner("Ladataan otteluohjelma..."):
         rounds = _load_fixtures()
 
     sorted_rounds = sorted(rounds.keys(), key=_round_number)
+
+    round_labels = {r: f"Kierros {_round_number(r)}" for r in sorted_rounds}
 
     # Filter controls
     col1, col2 = st.columns([2, 1])
     with col1:
         show_played = st.toggle("Näytä pelatut ottelut", value=True)
     with col2:
-        jump_to = st.selectbox("Hyppää kierrokselle", ["—"] + sorted_rounds, label_visibility="collapsed")
+        label_options = ["—"] + [round_labels[r] for r in sorted_rounds]
+        selected_label = st.selectbox("Hyppää kierrokselle", label_options, label_visibility="collapsed")
+        jump_to = next((r for r in sorted_rounds if round_labels[r] == selected_label), "—")
 
     # Active round = first round with unplayed matches; fallback to last round
     _active_round = next(
