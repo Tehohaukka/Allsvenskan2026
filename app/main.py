@@ -15,7 +15,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-from app.views import team_page, match_page, schedule_page, match_report_page, bets_page
+from app.views import team_page, match_page, schedule_page, match_report_page, bets_page, analysis_page
 from data.overrides import load_raw_overrides
 
 PAGES = {
@@ -24,6 +24,7 @@ PAGES = {
     "Otteluraportti": match_report_page,
     "Joukkueet": team_page,
     "Vedot": bets_page,
+    "Analyysi": analysis_page,
 }
 
 # Allow schedule page to navigate directly to match analysis

@@ -49,6 +49,7 @@ def render():
             "Panos (u)": b["stake_units"],
             "P.close": b.get("closing_odds"),
             "No-vig %": round(b["closing_no_vig_prob"] * 100, 1) if b.get("closing_no_vig_prob") else None,
+            "CLV %": b.get("clv_percent"),
             "Tulos": b["result"] or "—",
             "P/L (u)": b["profit_units"],
         })
@@ -64,6 +65,7 @@ def render():
             "EV %": st.column_config.NumberColumn(format="%+.1f"),
             "P.close": st.column_config.NumberColumn(format="%.3f"),
             "No-vig %": st.column_config.NumberColumn(format="%.1f"),
+            "CLV %": st.column_config.NumberColumn(format="%+.1f"),
             "P/L (u)": st.column_config.NumberColumn(format="%+.2f"),
         },
     )
@@ -85,11 +87,13 @@ def render():
 
             if b.get("closing_odds") or b.get("closing_no_vig_prob"):
                 st.markdown("**Sulkeutumiset**")
-                cc1, cc2 = st.columns(2)
+                cc1, cc2, cc3 = st.columns(3)
                 if b.get("closing_odds"):
                     cc1.metric("Pinnacle close", f"{b['closing_odds']:.3f}")
                 if b.get("closing_no_vig_prob"):
                     cc2.metric("No-vig close", f"{b['closing_no_vig_prob']*100:.1f} %")
+                if b.get("clv_percent") is not None:
+                    cc3.metric("CLV", f"{b['clv_percent']:+.1f} %")
 
             if b.get("rationale"):
                 st.markdown("**Perustelu**")
