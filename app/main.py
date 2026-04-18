@@ -1,5 +1,5 @@
 """
-VL2026 — Veikkausliiga 2026 ennustemalli
+AS2026 — Allsvenskan 2026 förutsägelsemodell
 Streamlit entry point
 """
 
@@ -9,7 +9,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")
 import streamlit as st
 
 st.set_page_config(
-    page_title="VL2026",
+    page_title="AS2026",
     page_icon="⚽",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -19,24 +19,23 @@ from app.views import team_page, match_page, schedule_page, match_report_page, b
 from data.overrides import load_raw_overrides
 
 PAGES = {
-    "Otteluohjelma": schedule_page,
-    "Matsianalyysi": match_page,
-    "Otteluraportti": match_report_page,
-    "Joukkueet": team_page,
-    "Vedot": bets_page,
-    "Analyysi": analysis_page,
+    "Matchprogram": schedule_page,
+    "Matchanalys": match_page,
+    "Matchrapport": match_report_page,
+    "Lag": team_page,
+    "Vad": bets_page,
+    "Analys": analysis_page,
 }
 
-# Allow schedule page to navigate directly to match analysis
 if "raw_overrides" not in st.session_state:
     st.session_state["raw_overrides"] = load_raw_overrides()
 if "page" not in st.session_state:
-    st.session_state["page"] = "Otteluohjelma"
+    st.session_state["page"] = "Matchprogram"
 if "team_detail" not in st.session_state:
     st.session_state["team_detail"] = None
 
 with st.sidebar:
-    st.title("⚽ VL2026")
+    st.title("⚽ AS2026")
     st.divider()
     st.markdown("""
     <style>
@@ -65,7 +64,7 @@ with st.sidebar:
     }
     </style>
     """, unsafe_allow_html=True)
-    selected = st.radio("Navigaatio", list(PAGES.keys()),
+    selected = st.radio("Navigation", list(PAGES.keys()),
                         index=list(PAGES.keys()).index(st.session_state["page"]),
                         label_visibility="collapsed")
     if selected != st.session_state["page"]:

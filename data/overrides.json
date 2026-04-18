@@ -1,62 +1,82 @@
 {
-  "649": {
-    "name": "HJK Helsinki",
-    "attack": 1.487,
-    "defense": 0.797
+  "362": {
+    "name": "Malmö FF",
+    "attack": 1.45,
+    "defense": 0.800
   },
-  "1164": {
-    "name": "Inter Turku",
-    "attack": 1.314,
-    "defense": 0.721
+  "363": {
+    "name": "IF Elfsborg",
+    "attack": 1.35,
+    "defense": 0.850
   },
-  "1163": {
-    "name": "Ilves",
-    "attack": 1.22,
-    "defense": 0.745
+  "359": {
+    "name": "IFK Göteborg",
+    "attack": 1.25,
+    "defense": 0.900
   },
-  "1165": {
-    "name": "KuPS",
-    "attack": 1.32,
-    "defense": 0.74
+  "357": {
+    "name": "AIK",
+    "attack": 1.20,
+    "defense": 0.900
   },
-  "2077": {
-    "name": "AC Oulu",
-    "attack": 1.167,
-    "defense": 0.95
+  "361": {
+    "name": "Djurgårdens IF",
+    "attack": 1.20,
+    "defense": 0.880
   },
-  "689": {
-    "name": "SJK",
-    "attack": 1.091,
-    "defense": 1.001
+  "365": {
+    "name": "Hammarby IF",
+    "attack": 1.18,
+    "defense": 0.920
   },
-  "2082": {
-    "name": "Gnistan",
-    "attack": 0.828,
-    "defense": 1.075
+  "568": {
+    "name": "Mjällby AIF",
+    "attack": 1.15,
+    "defense": 0.930
   },
-  "650": {
-    "name": "VPS",
-    "attack": 0.788,
-    "defense": 1.05
+  "366": {
+    "name": "BK Häcken",
+    "attack": 1.12,
+    "defense": 0.950
   },
-  "587": {
-    "name": "IFK Mariehamn",
-    "attack": 0.715,
-    "defense": 1.169
+  "569": {
+    "name": "IK Sirius",
+    "attack": 1.05,
+    "defense": 1.000
   },
-  "1166": {
-    "name": "Lahti",
-    "attack": 0.712,
-    "defense": 1.136
+  "371": {
+    "name": "Halmstads BK",
+    "attack": 0.95,
+    "defense": 1.050
   },
-  "2075": {
-    "name": "FF Jaro",
-    "attack": 0.698,
-    "defense": 1.225
+  "570": {
+    "name": "Degerfors IF",
+    "attack": 0.90,
+    "defense": 1.100
   },
-  "1168": {
-    "name": "TPS",
-    "attack": 0.642,
-    "defense": 1.254
+  "372": {
+    "name": "GAIS",
+    "attack": 0.88,
+    "defense": 1.120
+  },
+  "370": {
+    "name": "IF Brommapojkarna",
+    "attack": 0.85,
+    "defense": 1.150
+  },
+  "369": {
+    "name": "Kalmar FF",
+    "attack": 0.82,
+    "defense": 1.180
+  },
+  "573": {
+    "name": "Västerås SK",
+    "attack": 0.78,
+    "defense": 1.220
+  },
+  "574": {
+    "name": "Örgryte IS",
+    "attack": 0.75,
+    "defense": 1.250
   }
 }

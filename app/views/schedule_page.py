@@ -8,13 +8,13 @@ import sys, os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 
 from api.football_api import get_fixtures
-from config import VEIKKAUSLIIGA_ID, SEASON_2026
+from config import ALLSVENSKAN_ID, SEASON_2026
 from data.overrides import NAME_OVERRIDES
 
 
 @st.cache_data(ttl=3600, show_spinner=False)
 def _load_fixtures():
-    fixtures = get_fixtures(VEIKKAUSLIIGA_ID, SEASON_2026)
+    fixtures = get_fixtures(ALLSVENSKAN_ID, SEASON_2026)
     rounds = {}
     for f in fixtures:
         status = f["fixture"]["status"]["short"]
@@ -51,30 +51,28 @@ def _round_number(round_name: str) -> int:
 
 
 def render():
-    st.title("Otteluohjelma 2026")
+    st.title("Matchprogram 2026")
 
     col_title, col_refresh = st.columns([5, 1])
     with col_refresh:
-        if st.button("🔄 Päivitä"):
+        if st.button("🔄 Uppdatera"):
             _load_fixtures.clear()
 
-    with st.spinner("Ladataan otteluohjelma..."):
+    with st.spinner("Laddar matchprogram..."):
         rounds = _load_fixtures()
 
     sorted_rounds = sorted(rounds.keys(), key=_round_number)
 
-    round_labels = {r: f"Kierros {_round_number(r)}" for r in sorted_rounds}
+    round_labels = {r: f"Omgång {_round_number(r)}" for r in sorted_rounds}
 
-    # Filter controls
     col1, col2 = st.columns([2, 1])
     with col1:
-        show_played = st.toggle("Näytä pelatut ottelut", value=True)
+        show_played = st.toggle("Visa spelade matcher", value=True)
     with col2:
         label_options = ["—"] + [round_labels[r] for r in sorted_rounds]
-        selected_label = st.selectbox("Hyppää kierrokselle", label_options, label_visibility="collapsed")
+        selected_label = st.selectbox("Gå till omgång", label_options, label_visibility="collapsed")
         jump_to = next((r for r in sorted_rounds if round_labels[r] == selected_label), "—")
 
-    # Active round = first round with unplayed matches; fallback to last round
     _active_round = next(
         (r for r in sorted_rounds if any(m["status"] == "NS" or m["goals_home"] is None
                                          for m in rounds[r])),
@@ -96,12 +94,12 @@ def render():
         date_str = dates[0] if len(dates) == 1 else f"{dates[0]} – {dates[-1]}"
         round_num = _round_number(round_name)
 
-        with st.expander(f"**Kierros {round_num}** — {date_str}", expanded=(round_name == _active_round)):
+        with st.expander(f"**Omgång {round_num}** — {date_str}", expanded=(round_name == _active_round)):
             for m in sorted(matches, key=lambda x: x["date"]):
                 if not show_played and m["status"] != "NS":
                     continue
 
-                col_date, col_match, col_analysoi, col_raportti = st.columns([1.2, 3, 1, 1.2])
+                col_date, col_match, col_analysera, col_rapport = st.columns([1.2, 3, 1, 1.2])
 
                 with col_date:
                     st.caption(m["date"])
@@ -113,19 +111,19 @@ def render():
                         score = f"{m['goals_home']}–{m['goals_away']}"
                         st.write(f"{m['home']} **{score}** {m['away']}")
 
-                with col_analysoi:
-                    if st.button("Analysoi →", key=f"match_{m['home']}_{m['away']}_{m['date']}"):
+                with col_analysera:
+                    if st.button("Analysera →", key=f"match_{m['home']}_{m['away']}_{m['date']}"):
                         st.session_state["match_home"] = m["home"]
                         st.session_state["match_away"] = m["away"]
-                        st.session_state["page"] = "Matsianalyysi"
+                        st.session_state["page"] = "Matchanalys"
                         st.rerun()
 
-                with col_raportti:
-                    played = m["status"] != "NS" or m["goals_home"] is not None
+                with col_rapport:
+                    played = m["status"] != "NS" and m["goals_home"] is not None
                     if played:
-                        if st.button("Raportti →", key=f"report_{m['home']}_{m['away']}_{m['date']}"):
+                        if st.button("Rapport →", key=f"report_{m['home']}_{m['away']}_{m['date']}"):
                             st.session_state["report_fixture"] = m
-                            st.session_state["page"] = "Otteluraportti"
+                            st.session_state["page"] = "Matchrapport"
                             st.rerun()
                     else:
-                        st.caption("Raportti", help="Saatavilla pelin jälkeen")
+                        st.caption("Rapport", help="Tillgänglig efter matchen")

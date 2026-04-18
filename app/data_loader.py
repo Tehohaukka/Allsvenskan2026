@@ -11,13 +11,13 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")
 
 from api.football_api import get_fixtures, get_teams, get_players
 from model.strengths import fixtures_to_df, calculate_strengths, league_averages
-from config import VEIKKAUSLIIGA_ID, SEASON_2025, SEASON_2026
+from config import ALLSVENSKAN_ID, SEASON_2025, SEASON_2026
 from data.overrides import load_raw_overrides, normalise, NAME_OVERRIDES
 
-# Manual league average overrides (goals/game).
-# Maalikeskiarvo 3.1/ottelu, kotietu 1.05 (avg_home/avg_away).
-_AVG_HOME_OVERRIDE: float = 1.588
-_AVG_AWAY_OVERRIDE: float = 1.512
+# Manuella ligagenomsnitt (mål/match).
+# Allsvenskan genomsnitt ca 2.95 mål/match, hemmalag vinner oftare.
+_AVG_HOME_OVERRIDE: float = 1.55
+_AVG_AWAY_OVERRIDE: float = 1.40
 
 
 @st.cache_data(ttl=3600, show_spinner=False)
@@ -27,7 +27,7 @@ def load_strengths_and_averages() -> tuple:
     League avg_home/avg_away are set manually via _AVG_HOME_OVERRIDE / _AVG_AWAY_OVERRIDE.
     Returns (strengths_df, avg_home, avg_away).
     """
-    fixtures_2025 = get_fixtures(VEIKKAUSLIIGA_ID, SEASON_2025)
+    fixtures_2025 = get_fixtures(ALLSVENSKAN_ID, SEASON_2025)
     df_2025 = fixtures_to_df(fixtures_2025)
     strengths = calculate_strengths(df_2025)
 
@@ -43,7 +43,7 @@ def get_session_overrides() -> dict[int, dict]:
 @st.cache_data(ttl=3600, show_spinner=False)
 def load_teams_2026():
     """Load 2026 season team list."""
-    return get_teams(VEIKKAUSLIIGA_ID, SEASON_2026)
+    return get_teams(ALLSVENSKAN_ID, SEASON_2026)
 
 
 @st.cache_data(ttl=86400, show_spinner=False)

@@ -12,11 +12,11 @@ from data.match_reports import get_report, save_report, make_key
 
 
 def render():
-    st.title("Otteluraportti")
+    st.title("Matchrapport")
 
     fixture = st.session_state.get("report_fixture")
     if not fixture:
-        st.info("Valitse ottelu otteluohjelmasta.")
+        st.info("Välj en match från matchprogrammet.")
         return
 
     home = fixture["home"]
@@ -30,12 +30,10 @@ def render():
     key = make_key(home_id, away_id, date)
     report = get_report(key)
 
-    # Header
     st.subheader(f"{home} {goals_home}–{goals_away} {away}")
     st.caption(date)
     st.divider()
 
-    # xG
     xg_home = report.get("xg_home")
     xg_away = report.get("xg_away")
 
@@ -46,27 +44,26 @@ def render():
     else:
         col_xg2.write("")
 
-    with st.expander("Muokkaa xG-arvoja"):
+    with st.expander("Redigera xG-värden"):
         with st.form("xg_form"):
             c1, c2 = st.columns(2)
             xg_h = c1.number_input(f"{home} xG", value=float(xg_home or 0.0),
                                    min_value=0.0, max_value=10.0, step=0.01, format="%.2f")
             xg_a = c2.number_input(f"{away} xG", value=float(xg_away or 0.0),
                                    min_value=0.0, max_value=10.0, step=0.01, format="%.2f")
-            if st.form_submit_button("Tallenna xG", type="primary"):
+            if st.form_submit_button("Spara xG", type="primary"):
                 save_report(key, {"xg_home": xg_h, "xg_away": xg_a})
                 st.rerun()
 
     st.divider()
 
-    # Lineups
     lineup_home = report.get("lineup_home")
     lineup_away = report.get("lineup_away")
     subs_home = report.get("subs_home", [])
     subs_away = report.get("subs_away", [])
 
     if lineup_home and lineup_away:
-        st.subheader("Kokoonpanot")
+        st.subheader("Laguppställningar")
         col_h, col_a = st.columns(2)
         with col_h:
             _render_lineup(home, lineup_home, subs_home)
@@ -74,13 +71,12 @@ def render():
             _render_lineup(away, lineup_away, subs_away)
         st.divider()
 
-    # Notes
     notes = report.get("notes", "")
     if notes:
-        st.subheader("Raportti")
+        st.subheader("Rapport")
         st.markdown(_safe_md(notes), unsafe_allow_html=True)
     else:
-        st.subheader("Raportti")
+        st.subheader("Rapport")
         _notes_form(key, notes)
 
 
@@ -90,9 +86,9 @@ def _render_lineup(team_name: str, lineup: dict, subs: list) -> None:
 
     rows = [
         ("MV", lineup.get("gk", [])),
-        ("PUO", lineup.get("def", [])),
-        ("KK", lineup.get("mid", [])),
-        ("HYÖ", lineup.get("fwd", [])),
+        ("DEF", lineup.get("def", [])),
+        ("MF", lineup.get("mid", [])),
+        ("FWD", lineup.get("fwd", [])),
     ]
     for label, players in rows:
         if players:
@@ -104,7 +100,7 @@ def _render_lineup(team_name: str, lineup: dict, subs: list) -> None:
 
     if subs:
         st.markdown(
-            "<span style='color:gray;font-size:0.78em'>VAIHDOT</span>",
+            "<span style='color:gray;font-size:0.78em'>BYTEN</span>",
             unsafe_allow_html=True,
         )
         for s in subs:
@@ -116,20 +112,18 @@ def _render_lineup(team_name: str, lineup: dict, subs: list) -> None:
 
 def _safe_md(text: str) -> str:
     """Escape characters that confuse Streamlit's markdown parser."""
-    # Finnish genitive colons: VPS:n, xG:ä → emoji parser eats them
     text = re.sub(r':([^\s:])', lambda m: '&#58;' + m.group(1), text)
-    # Digits followed by period at line start → markdown ordered list
     text = re.sub(r'^(\d+)\.', r'\1\\.', text, flags=re.MULTILINE)
     return text
 
 
 def _notes_form(key: str, current: str) -> None:
     new_notes = st.text_area(
-        "Raportti",
+        "Rapport",
         value=current,
         height=300,
         label_visibility="collapsed",
     )
-    if st.button("Tallenna raportti", type="primary"):
+    if st.button("Spara rapport", type="primary"):
         save_report(key, {"notes": new_notes})
         st.rerun()

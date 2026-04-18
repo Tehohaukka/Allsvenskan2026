@@ -1,32 +1,36 @@
 """
-Manual strength overrides for 2026 season.
-Raw values are stored in data/overrides.json and editable via the UI.
-Normalised so that league average attack = defense = 1.0.
+Manuella styrkeöverskridningar för säsongen 2026.
+Råvärden lagras i data/overrides.json och kan redigeras via UI.
+Normaliserade så att ligasnittet anfall = försvar = 1,0.
 """
 
 import json
 from pathlib import Path
 
 NAME_OVERRIDES: dict[int, str] = {
-    1168: "TPS",
+    # Lägg till eventuella namnmappningar här om API-namnet skiljer sig
 }
 
 _JSON_PATH = Path(__file__).parent / "overrides.json"
 
-# Hardcoded fallback if JSON is missing
+# Standardvärden om JSON saknas (API-Football team-ID:n för Allsvenskan — verifiera vid första API-hämtning)
 _FALLBACK_RAW: dict[int, dict] = {
-    649:  {"name": "HJK Helsinki",  "attack": 1.450, "defense": 0.835},
-    1164: {"name": "Inter Turku",   "attack": 1.300, "defense": 0.780},
-    1163: {"name": "Ilves",         "attack": 1.230, "defense": 0.795},
-    1165: {"name": "KuPS",          "attack": 1.215, "defense": 0.790},
-    2077: {"name": "AC Oulu",       "attack": 1.180, "defense": 1.020},
-    689:  {"name": "SJK",           "attack": 1.120, "defense": 1.015},
-    2082: {"name": "Gnistan",       "attack": 0.985, "defense": 1.040},
-    650:  {"name": "VPS",           "attack": 0.820, "defense": 1.000},
-    587:  {"name": "IFK Mariehamn", "attack": 0.790, "defense": 1.085},
-    1166: {"name": "Lahti",         "attack": 0.782, "defense": 1.242},
-    2075: {"name": "FF Jaro",       "attack": 0.737, "defense": 1.150},
-    1168: {"name": "TPS",           "attack": 0.690, "defense": 1.290},
+    362:  {"name": "Malmö FF",          "attack": 1.450, "defense": 0.800},
+    363:  {"name": "IF Elfsborg",        "attack": 1.350, "defense": 0.850},
+    359:  {"name": "IFK Göteborg",       "attack": 1.250, "defense": 0.900},
+    357:  {"name": "AIK",                "attack": 1.200, "defense": 0.900},
+    361:  {"name": "Djurgårdens IF",     "attack": 1.200, "defense": 0.880},
+    365:  {"name": "Hammarby IF",        "attack": 1.180, "defense": 0.920},
+    568:  {"name": "Mjällby AIF",        "attack": 1.150, "defense": 0.930},
+    366:  {"name": "BK Häcken",          "attack": 1.120, "defense": 0.950},
+    569:  {"name": "IK Sirius",          "attack": 1.050, "defense": 1.000},
+    371:  {"name": "Halmstads BK",       "attack": 0.950, "defense": 1.050},
+    570:  {"name": "Degerfors IF",       "attack": 0.900, "defense": 1.100},
+    372:  {"name": "GAIS",               "attack": 0.880, "defense": 1.120},
+    370:  {"name": "IF Brommapojkarna",  "attack": 0.850, "defense": 1.150},
+    369:  {"name": "Kalmar FF",          "attack": 0.820, "defense": 1.180},
+    573:  {"name": "Västerås SK",        "attack": 0.780, "defense": 1.220},
+    574:  {"name": "Örgryte IS",         "attack": 0.750, "defense": 1.250},
 }
 
 

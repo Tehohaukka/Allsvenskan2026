@@ -26,8 +26,8 @@ def _get(endpoint: str, params: dict, force_refresh: bool = False) -> dict:
 
     if not API_FOOTBALL_KEY:
         raise RuntimeError(
-            f"Tiedostoa '{cache_file}' ei löydy eikä API_FOOTBALL_KEY ole asetettu. "
-            "Lisää avain .env-tiedostoon tai ota yhteyttä ylläpitäjään."
+            f"Filen '{cache_file}' hittades inte och API_FOOTBALL_KEY är inte inställd. "
+            "Lägg till nyckeln i .env-filen eller kontakta administratören."
         )
 
     headers = {"x-apisports-key": API_FOOTBALL_KEY}
