@@ -54,18 +54,18 @@ def load_squad(team_id: int):
 
 def get_strength(strengths_df, team_id: int) -> dict:
     """Return strength dict for a team, applying manual overrides where defined."""
-    row = strengths_df[strengths_df["team_id"] == team_id]
-    if row.empty:
-        base = {"attack": 1.0, "defense": 1.0, "games": 0, "scored": 0, "conceded": 0}
-    else:
-        r = row.iloc[0]
-        base = {
-            "attack": r["attack"],
-            "defense": r["defense"],
-            "games": int(r["games"]),
-            "scored": int(r["scored"]),
-            "conceded": int(r["conceded"]),
-        }
+    base = {"attack": 1.0, "defense": 1.0, "games": 0, "scored": 0, "conceded": 0}
+    if not strengths_df.empty and "team_id" in strengths_df.columns:
+        row = strengths_df[strengths_df["team_id"] == team_id]
+        if not row.empty:
+            r = row.iloc[0]
+            base = {
+                "attack": r["attack"],
+                "defense": r["defense"],
+                "games": int(r["games"]),
+                "scored": int(r["scored"]),
+                "conceded": int(r["conceded"]),
+            }
     overrides = get_session_overrides()
     if team_id in overrides:
         base.update(overrides[team_id])
