@@ -1,5 +1,5 @@
 """
-AS2026 — Allsvenskan 2026 förutsägelsemodell
+AS2026 — Allsvenskan 2026 ennustemalli
 Streamlit entry point
 """
 
@@ -19,18 +19,18 @@ from app.views import team_page, match_page, schedule_page, match_report_page, b
 from data.overrides import load_raw_overrides
 
 PAGES = {
-    "Matchprogram": schedule_page,
-    "Matchanalys": match_page,
-    "Matchrapport": match_report_page,
-    "Lag": team_page,
-    "Vad": bets_page,
-    "Analys": analysis_page,
+    "Otteluohjelma": schedule_page,
+    "Matsianalyysi": match_page,
+    "Otteluraportti": match_report_page,
+    "Joukkueet": team_page,
+    "Vedot": bets_page,
+    "Analyysi": analysis_page,
 }
 
 if "raw_overrides" not in st.session_state:
     st.session_state["raw_overrides"] = load_raw_overrides()
 if "page" not in st.session_state:
-    st.session_state["page"] = "Matchprogram"
+    st.session_state["page"] = "Otteluohjelma"
 if "team_detail" not in st.session_state:
     st.session_state["team_detail"] = None
 

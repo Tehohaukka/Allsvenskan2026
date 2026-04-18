@@ -51,26 +51,26 @@ def _round_number(round_name: str) -> int:
 
 
 def render():
-    st.title("Matchprogram 2026")
+    st.title("Otteluohjelma 2026")
 
     col_title, col_refresh = st.columns([5, 1])
     with col_refresh:
-        if st.button("🔄 Uppdatera"):
+        if st.button("🔄 Päivitä"):
             _load_fixtures.clear()
 
-    with st.spinner("Laddar matchprogram..."):
+    with st.spinner("Ladataan otteluohjelma..."):
         rounds = _load_fixtures()
 
     sorted_rounds = sorted(rounds.keys(), key=_round_number)
 
-    round_labels = {r: f"Omgång {_round_number(r)}" for r in sorted_rounds}
+    round_labels = {r: f"Kierros {_round_number(r)}" for r in sorted_rounds}
 
     col1, col2 = st.columns([2, 1])
     with col1:
-        show_played = st.toggle("Visa spelade matcher", value=True)
+        show_played = st.toggle("Näytä pelatut ottelut", value=True)
     with col2:
         label_options = ["—"] + [round_labels[r] for r in sorted_rounds]
-        selected_label = st.selectbox("Gå till omgång", label_options, label_visibility="collapsed")
+        selected_label = st.selectbox("Siirry kierrokseen", label_options, label_visibility="collapsed")
         jump_to = next((r for r in sorted_rounds if round_labels[r] == selected_label), "—")
 
     _active_round = next(
@@ -94,7 +94,7 @@ def render():
         date_str = dates[0] if len(dates) == 1 else f"{dates[0]} – {dates[-1]}"
         round_num = _round_number(round_name)
 
-        with st.expander(f"**Omgång {round_num}** — {date_str}", expanded=(round_name == _active_round)):
+        with st.expander(f"**Kierros {round_num}** — {date_str}", expanded=(round_name == _active_round)):
             for m in sorted(matches, key=lambda x: x["date"]):
                 if not show_played and m["status"] != "NS":
                     continue
@@ -112,18 +112,18 @@ def render():
                         st.write(f"{m['home']} **{score}** {m['away']}")
 
                 with col_analysera:
-                    if st.button("Analysera →", key=f"match_{m['home']}_{m['away']}_{m['date']}"):
+                    if st.button("Analysoi →", key=f"match_{m['home']}_{m['away']}_{m['date']}"):
                         st.session_state["match_home"] = m["home"]
                         st.session_state["match_away"] = m["away"]
-                        st.session_state["page"] = "Matchanalys"
+                        st.session_state["page"] = "Matsianalyysi"
                         st.rerun()
 
                 with col_rapport:
                     played = m["status"] != "NS" and m["goals_home"] is not None
                     if played:
-                        if st.button("Rapport →", key=f"report_{m['home']}_{m['away']}_{m['date']}"):
+                        if st.button("Raportti →", key=f"report_{m['home']}_{m['away']}_{m['date']}"):
                             st.session_state["report_fixture"] = m
-                            st.session_state["page"] = "Matchrapport"
+                            st.session_state["page"] = "Otteluraportti"
                             st.rerun()
                     else:
-                        st.caption("Rapport", help="Tillgänglig efter matchen")
+                        st.caption("Raportti", help="Saatavilla ottelun jälkeen")

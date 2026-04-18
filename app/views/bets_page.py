@@ -12,7 +12,7 @@ from data.bets import load_bets
 
 
 def render():
-    st.title("Vad")
+    st.title("Vedot")
 
     bets = load_bets()
 
@@ -23,32 +23,32 @@ def render():
     roi = (total_pl / total_staked * 100) if total_staked else 0.0
 
     c1, c2, c3, c4 = st.columns(4)
-    c1.metric("Öppna vad", len(open_bets))
-    c2.metric("Avgjorda", len(settled))
+    c1.metric("Avoimet vedot", len(open_bets))
+    c2.metric("Selvitetty", len(settled))
     c3.metric("P/L (u)", f"{total_pl:+.2f}" if settled else "—")
     c4.metric("ROI", f"{roi:.1f} %" if settled else "—")
 
     st.divider()
 
     if not bets:
-        st.info("Inga registrerade vad.")
+        st.info("Ei rekisteröityjä vetoja.")
         return
 
     rows = []
     for b in bets:
         rows.append({
-            "Datum": b["date_placed"],
-            "Match": b["match"],
-            "Marknad": b["market"],
-            "Sajt": b["bookmaker"],
+            "Päivämäärä": b["date_placed"],
+            "Ottelu": b["match"],
+            "Markkina": b["market"],
+            "Sivusto": b["bookmaker"],
             "Odds": b["odds"],
-            "Modell %": round(b["model_prob"] * 100, 1),
+            "Malli %": round(b["model_prob"] * 100, 1),
             "EV %": round((b["model_prob"] * b["odds"] - 1) * 100, 1),
-            "Insats (u)": b["stake_units"],
-            "P.stäng": b.get("closing_odds"),
+            "Panos (u)": b["stake_units"],
+            "S.sulk.": b.get("closing_odds"),
             "No-vig %": round(b["closing_no_vig_prob"] * 100, 1) if b.get("closing_no_vig_prob") else None,
             "CLV %": b.get("clv_percent"),
-            "Resultat": b["result"] or "—",
+            "Tulos": b["result"] or "—",
             "P/L (u)": b["profit_units"],
         })
 
@@ -59,9 +59,9 @@ def render():
         hide_index=True,
         column_config={
             "Odds": st.column_config.NumberColumn(format="%.3f"),
-            "Modell %": st.column_config.NumberColumn(format="%.1f"),
+            "Malli %": st.column_config.NumberColumn(format="%.1f"),
             "EV %": st.column_config.NumberColumn(format="%+.1f"),
-            "P.stäng": st.column_config.NumberColumn(format="%.3f"),
+            "S.sulk.": st.column_config.NumberColumn(format="%.3f"),
             "No-vig %": st.column_config.NumberColumn(format="%.1f"),
             "CLV %": st.column_config.NumberColumn(format="%+.1f"),
             "P/L (u)": st.column_config.NumberColumn(format="%+.2f"),
@@ -70,29 +70,29 @@ def render():
 
     st.divider()
 
-    st.subheader("Vaddetaljer")
+    st.subheader("Vedon tiedot")
     for b in bets:
         label = f"{b['date_placed']} · {b['match']} · {b['market']} @ {b['odds']}"
         with st.expander(label):
             c1, c2, c3, c4 = st.columns(4)
             c1.metric("Odds", f"{b['odds']:.3f}")
-            c2.metric("Modell", f"{b['model_prob']*100:.1f} %")
+            c2.metric("Malli", f"{b['model_prob']*100:.1f} %")
             edge = b["model_prob"] - (1 / b["odds"])
             c3.metric("Edge", f"{edge*100:+.1f} pp")
-            c4.metric("Insats", f"{b['stake_units']} u")
+            c4.metric("Panos", f"{b['stake_units']} u")
 
             if b.get("closing_odds") or b.get("closing_no_vig_prob"):
-                st.markdown("**Stängningskurser**")
+                st.markdown("**Sulkevat kertoimet**")
                 cc1, cc2, cc3 = st.columns(3)
                 if b.get("closing_odds"):
-                    cc1.metric("Pinnacle stäng", f"{b['closing_odds']:.3f}")
+                    cc1.metric("Pinnacle sulk.", f"{b['closing_odds']:.3f}")
                 if b.get("closing_no_vig_prob"):
-                    cc2.metric("No-vig stäng", f"{b['closing_no_vig_prob']*100:.1f} %")
+                    cc2.metric("No-vig sulk.", f"{b['closing_no_vig_prob']*100:.1f} %")
                 if b.get("clv_percent") is not None:
                     cc3.metric("CLV", f"{b['clv_percent']:+.1f} %")
 
             if b.get("rationale"):
-                st.markdown("**Motivering**")
+                st.markdown("**Perustelu**")
                 st.markdown(b["rationale"])
 
             if b.get("notes"):

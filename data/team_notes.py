@@ -1,275 +1,275 @@
 """
-Lagspecifika anteckningar, startuppställningar och stjärnklassificering för säsongen 2026.
-Källa: Allsvenskan säsongsförhandsvisning 2026.
+Joukkuekohtaiset muistiinpanot, aloituskokoonpanot ja tähtien luokittelu kaudelle 2026.
+Lähde: Allsvenskan 2026 -kauden ennakko.
 """
 
-# stjarnor: float 1–5 (precision 0,5)
-# anteckningar: lista av strängar (punktlistor)
-# startuppstallning: dict { "formation": str, "rader": list[list[str]] } uppifrån och ned
-# transfers: { "in": list[str], "out": list[str] }
+# tahdet: float 1–5 (tarkkuus 0,5)
+# muistiinpanot: lista merkkijonoista (luettelomerkityt)
+# kokoonpano: dict { "muodostelma": str, "rivit": list[list[str]] } ylhäältä alas
+# siirrot: { "in": list[str], "out": list[str] }
 
 TEAM_NOTES: dict[int, dict] = {
 
     362: {  # Malmö FF
-        "stjarnor": 5,
-        "kategori": "Storfavorit",
-        "placering_2025": "2:a",
-        "transfers": {
+        "tahdet": 5,
+        "kategoria": "Suursuosikki",
+        "sijoitus_2025": "2.",
+        "siirrot": {
             "in":  [],
             "out": [],
         },
-        "anteckningar": [
-            "Ligans starkaste trupp på pappret — bred och djup spelartrupp.",
-            "Historiskt dominerande hemma på Eleda Stadion.",
-            "Stark i europeiska sammanhang, vilket påverkar trötthet i ligaspelet.",
-            "Offensivt explosiva med snabba anfallare på kanterna.",
+        "muistiinpanot": [
+            "Liigan vahvin joukkue paperilla — laaja ja syvä pelaajisto.",
+            "Historiallisesti hallitseva kotona Eleda Stadionilla.",
+            "Vahva eurooppalaisissa peleissä, mikä vaikuttaa väsymykseen liigassa.",
+            "Hyökkäyksellisesti räjähtävä nopeiden laitahyökkääjien ansiosta.",
         ],
-        "startuppstallning": {
-            "formation": "4-3-3",
-            "rader": [
-                ["Anfallare", "Spets", "Anfallare"],
-                ["CM", "CM", "CM"],
-                ["VB", "CB", "CB", "HB"],
+        "kokoonpano": {
+            "muodostelma": "4-3-3",
+            "rivit": [
+                ["Hyökkääjä", "Kärkihyökkääjä", "Hyökkääjä"],
+                ["KK", "KK", "KK"],
+                ["VP", "KP", "KP", "OP"],
                 ["MV"],
             ],
         },
     },
 
     363: {  # IF Elfsborg
-        "stjarnor": 4.5,
-        "kategori": "Titelkandidat",
-        "placering_2025": "3:a",
-        "transfers": {
+        "tahdet": 4.5,
+        "kategoria": "Mestaruusehdokas",
+        "sijoitus_2025": "3.",
+        "siirrot": {
             "in":  [],
             "out": [],
         },
-        "anteckningar": [
-            "Välorganiserat lag med hög press och snabba omställningar.",
-            "Starkt hemma på Borås Arena.",
-            "Konsekvent topplag de senaste säsongerna.",
+        "muistiinpanot": [
+            "Hyvin organisoitu joukkue korkealla pressillä ja nopeilla siirtymillä.",
+            "Vahva kotona Borås Arenalla.",
+            "Tasainen kärkijoukkue viime kausina.",
         ],
-        "startuppstallning": None,
+        "kokoonpano": None,
     },
 
     359: {  # IFK Göteborg
-        "stjarnor": 3.5,
-        "kategori": "Mittenskikt",
-        "placering_2025": "5:a",
-        "transfers": {
+        "tahdet": 3.5,
+        "kategoria": "Keskikasti",
+        "sijoitus_2025": "5.",
+        "siirrot": {
             "in":  [],
             "out": [],
         },
-        "anteckningar": [
-            "Historiskt storlaget med stort fansupport på Gamla Ullevi.",
-            "Bygger på unga talanger och erfarna spelare.",
-            "Ambition att återta topppositionerna i ligan.",
+        "muistiinpanot": [
+            "Historiallisesti suuri seura ja suuri fanijoukko Gamla Ullevilla.",
+            "Rakentaa nuorista lahjakkuuksista ja kokeneista pelaajista.",
+            "Tavoitteena palata liigan kärkipaikoille.",
         ],
-        "startuppstallning": None,
+        "kokoonpano": None,
     },
 
     357: {  # AIK
-        "stjarnor": 3.5,
-        "kategori": "Mittenskikt",
-        "placering_2025": "4:a",
-        "transfers": {
+        "tahdet": 3.5,
+        "kategoria": "Keskikasti",
+        "sijoitus_2025": "4.",
+        "siirrot": {
             "in":  [],
             "out": [],
         },
-        "anteckningar": [
-            "Stockholm-laget med stor hemmapress på Friends Arena.",
-            "Fysiskt starkt och disciplinerat försvar.",
-            "Varierar mellan offensivt och defensivt spel beroende på motstånd.",
+        "muistiinpanot": [
+            "Tukholmalainen seura suurella kotipaineen Friends Arenalla.",
+            "Fyysisesti vahva ja kurinalaisesti puolustava.",
+            "Vaihtelee hyökkäävän ja puolustavan pelin välillä vastustajan mukaan.",
         ],
-        "startuppstallning": None,
+        "kokoonpano": None,
     },
 
     361: {  # Djurgårdens IF
-        "stjarnor": 3.5,
-        "kategori": "Mittenskikt",
-        "placering_2025": "6:a",
-        "transfers": {
+        "tahdet": 3.5,
+        "kategoria": "Keskikasti",
+        "sijoitus_2025": "6.",
+        "siirrot": {
             "in":  [],
             "out": [],
         },
-        "anteckningar": [
-            "Stockholmsderbylaget med lojal fanbas.",
-            "Tekniskt fotboll med kreativa mittfältare.",
-            "Stark hemma, mer ojämn borta.",
+        "muistiinpanot": [
+            "Tukholmalainen derbyseura uskollisella fanijoukkiolla.",
+            "Tekninen jalkapallo luovilla keskikenttäpelaajilla.",
+            "Vahva kotona, epätasaisempi vieraissa.",
         ],
-        "startuppstallning": None,
+        "kokoonpano": None,
     },
 
     365: {  # Hammarby IF
-        "stjarnor": 3.5,
-        "kategori": "Mittenskikt",
-        "placering_2025": "7:a",
-        "transfers": {
+        "tahdet": 3.5,
+        "kategoria": "Keskikasti",
+        "sijoitus_2025": "7.",
+        "siirrot": {
             "in":  [],
             "out": [],
         },
-        "anteckningar": [
-            "Stor supporterbas och intensiv hemmastämning på Tele2 Arena.",
-            "Vältränat och energiskt spelstil.",
-            "Stark i derby mot AIK och Djurgården.",
+        "muistiinpanot": [
+            "Suuri kannattajakunta ja intensiivinen kotitunnelma Tele2 Arenalla.",
+            "Hyvin harjoiteltu ja energinen pelityyli.",
+            "Vahva derbeissä AIK:ta ja Djurgårdia vastaan.",
         ],
-        "startuppstallning": None,
+        "kokoonpano": None,
     },
 
     568: {  # Mjällby AIF
-        "stjarnor": 4,
-        "kategori": "Försvarsmästare",
-        "placering_2025": "1:a — Mästare",
-        "transfers": {
+        "tahdet": 4,
+        "kategoria": "Puolustajavahvuus",
+        "sijoitus_2025": "1. — Mestari",
+        "siirrot": {
             "in":  [],
             "out": [],
         },
-        "anteckningar": [
-            "Regerande mästare — vann Allsvenskan 2025.",
-            "Extremt välorganiserat försvar, svårt att besegra.",
-            "Spelar pragmatisk, effektiv fotboll snarare än underhållande.",
-            "Hemmaplan på Strandvallen är en fästning.",
+        "muistiinpanot": [
+            "Hallitseva mestari — voitti Allsvenskanin 2025.",
+            "Erittäin hyvin organisoitu puolustus, vaikea voittaa.",
+            "Pelaa pragmaattista, tehokasta jalkapalloa viihteellisyyden sijaan.",
+            "Kotistadion Strandvallen on linnoitus.",
         ],
-        "startuppstallning": None,
+        "kokoonpano": None,
     },
 
     366: {  # BK Häcken
-        "stjarnor": 3,
-        "kategori": "Övre mittenskikt",
-        "placering_2025": "8:a",
-        "transfers": {
+        "tahdet": 3,
+        "kategoria": "Ylempi keskikasti",
+        "sijoitus_2025": "8.",
+        "siirrot": {
             "in":  [],
             "out": [],
         },
-        "anteckningar": [
-            "Göteborgslaget med offensiv spelstil.",
-            "Producerar talanger som säljs vidare.",
-            "Variabel form men kan besegra vem som helst på en bra dag.",
+        "muistiinpanot": [
+            "Göteborgilainen seura hyökkäävällä pelityylillä.",
+            "Tuottaa lahjakkuuksia eteenpäin myytäväksi.",
+            "Vaihteleva vire, mutta voi voittaa kenet tahansa hyvänä päivänä.",
         ],
-        "startuppstallning": None,
+        "kokoonpano": None,
     },
 
     569: {  # IK Sirius
-        "stjarnor": 3,
-        "kategori": "Mittenskikt",
-        "placering_2025": "9:a",
-        "transfers": {
+        "tahdet": 3,
+        "kategoria": "Keskikasti",
+        "sijoitus_2025": "9.",
+        "siirrot": {
             "in":  [],
             "out": [],
         },
-        "anteckningar": [
-            "Uppsalalaget med stabil ligaposition de senaste åren.",
-            "Välbalanserat lag utan stora stjärnor.",
-            "Leder ligatabellen i tidig april 2026 — stark inledning.",
+        "muistiinpanot": [
+            "Uppsalalalainen seura vakaan liiga-aseman kanssa viime vuosina.",
+            "Tasapainoinen joukkue ilman suuria tähtiä.",
+            "Johtaa liigaa huhtikuun alussa 2026 — vahva avaus.",
         ],
-        "startuppstallning": None,
+        "kokoonpano": None,
     },
 
     371: {  # Halmstads BK
-        "stjarnor": 2.5,
-        "kategori": "Nedre mittenskikt",
-        "placering_2025": "10:a",
-        "transfers": {
+        "tahdet": 2.5,
+        "kategoria": "Alempi keskikasti",
+        "sijoitus_2025": "10.",
+        "siirrot": {
             "in":  [],
             "out": [],
         },
-        "anteckningar": [
-            "Etablerat Allsvenskalag men med begränsad budget.",
-            "Försvarsorienterat spel för att hålla sig kvar.",
+        "muistiinpanot": [
+            "Vakiintunut Allsvenskan-seura rajoitetulla budjetilla.",
+            "Puolustuspainotteinen peli pysymiseksi sarjassa.",
         ],
-        "startuppstallning": None,
+        "kokoonpano": None,
     },
 
     570: {  # Degerfors IF
-        "stjarnor": 2,
-        "kategori": "Nykomling/Nedre",
-        "placering_2025": "11:a",
-        "transfers": {
+        "tahdet": 2,
+        "kategoria": "Uustulokas/Alhainen",
+        "sijoitus_2025": "11.",
+        "siirrot": {
             "in":  [],
             "out": [],
         },
-        "anteckningar": [
-            "Litet lag från Degerfors med kompakt spelstil.",
-            "Kampar om att undvika nedflyttning.",
+        "muistiinpanot": [
+            "Pieni seura Degerforssista kompaktilla pelityylillä.",
+            "Taistelee pudotuksen välttämiseksi.",
         ],
-        "startuppstallning": None,
+        "kokoonpano": None,
     },
 
     372: {  # GAIS
-        "stjarnor": 2,
-        "kategori": "Nedre skikt",
-        "placering_2025": "12:a",
-        "transfers": {
+        "tahdet": 2,
+        "kategoria": "Alempi kaasi",
+        "sijoitus_2025": "12.",
+        "siirrot": {
             "in":  [],
             "out": [],
         },
-        "anteckningar": [
-            "Göteborgslaget med historik men begränsade resurser.",
-            "Kämpar för överlevnad i Allsvenskan.",
+        "muistiinpanot": [
+            "Göteborgilainen seura historialla mutta rajoitetuilla resursseilla.",
+            "Taistelee selviytymisestä Allsvenskanissa.",
         ],
-        "startuppstallning": None,
+        "kokoonpano": None,
     },
 
     370: {  # IF Brommapojkarna
-        "stjarnor": 2,
-        "kategori": "Nedre skikt",
-        "placering_2025": "13:a",
-        "transfers": {
+        "tahdet": 2,
+        "kategoria": "Alempi kaasi",
+        "sijoitus_2025": "13.",
+        "siirrot": {
             "in":  [],
             "out": [],
         },
-        "anteckningar": [
-            "Stockholmsklubben med ung trupp.",
-            "Fokus på ungdomsutveckling snarare än direkta resultat.",
-            "Nedflyttningskandidat om inte förstärkning sker.",
+        "muistiinpanot": [
+            "Tukholmalainen seura nuorella joukkueella.",
+            "Painopiste nuorisokehityksessä välittömien tulosten sijaan.",
+            "Pudotusehdokas ilman vahvistuksia.",
         ],
-        "startuppstallning": None,
+        "kokoonpano": None,
     },
 
     369: {  # Kalmar FF
-        "stjarnor": 1.5,
-        "kategori": "Uppflyttad",
-        "placering_2025": "Superettan — uppflyttad",
-        "transfers": {
+        "tahdet": 1.5,
+        "kategoria": "Nousijajoukkue",
+        "sijoitus_2025": "Superettan — noussut",
+        "siirrot": {
             "in":  [],
             "out": [],
         },
-        "anteckningar": [
-            "Återvänder till Allsvenskan efter ett år i Superettan.",
-            "Erfaret lag med bekantskap med toppdivisionen.",
-            "Realistiskt mål: stanna kvar i ligan.",
+        "muistiinpanot": [
+            "Palaa Allsvenskaniin vuoden Superettanissa olon jälkeen.",
+            "Kokenut joukkue jolla tuttavuus korkeimmasta sarjasta.",
+            "Realistinen tavoite: pysyä sarjassa.",
         ],
-        "startuppstallning": None,
+        "kokoonpano": None,
     },
 
     573: {  # Västerås SK
-        "stjarnor": 1.5,
-        "kategori": "Uppflyttad",
-        "placering_2025": "Superettan — uppflyttad",
-        "transfers": {
+        "tahdet": 1.5,
+        "kategoria": "Nousijajoukkue",
+        "sijoitus_2025": "Superettan — noussut",
+        "siirrot": {
             "in":  [],
             "out": [],
         },
-        "anteckningar": [
-            "Debuterar i Allsvenskan på länge.",
-            "Stor utmaning att hålla sig kvar på toppnivå.",
-            "Begränsad budget jämfört med etablerade Allsvenskalag.",
+        "muistiinpanot": [
+            "Debytoi Allsvenskanissa pitkän tauon jälkeen.",
+            "Suuri haaste pysyä huipputasolla.",
+            "Rajoitettu budjetti verrattuna vakiintuneisiin Allsvenskan-seuroihin.",
         ],
-        "startuppstallning": None,
+        "kokoonpano": None,
     },
 
     574: {  # Örgryte IS
-        "stjarnor": 1,
-        "kategori": "Uppflyttad efter 16 år",
-        "placering_2025": "Superettan — uppflyttad",
-        "transfers": {
+        "tahdet": 1,
+        "kategoria": "Nousija 16 vuoden tauon jälkeen",
+        "sijoitus_2025": "Superettan — noussut",
+        "siirrot": {
             "in":  [],
             "out": [],
         },
-        "anteckningar": [
-            "Historisk klubb som återvänder till Allsvenskan efter 16 år.",
-            "Stor emotionell händelse för Göteborg men svag trupp för toppdivisionen.",
-            "Storfavorit till nedflyttning — behöver mirakel för att stanna kvar.",
+        "muistiinpanot": [
+            "Historiallinen seura joka palaa Allsvenskaniin 16 vuoden tauon jälkeen.",
+            "Suuri tunnelataaus Göteborgille, mutta heikko joukkue huipputasolla.",
+            "Suursuosikki pudotukseen — tarvitsee ihmeen pysyäkseen.",
         ],
-        "startuppstallning": None,
+        "kokoonpano": None,
     },
 }

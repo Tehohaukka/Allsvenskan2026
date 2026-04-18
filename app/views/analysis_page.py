@@ -69,12 +69,12 @@ def _render_match(match: dict) -> None:
             c_p1 = c_pX = c_p2 = None
 
         cols = st.columns(6)
-        cols[0].metric("Modell 1", _pct(m["p1"]))
-        cols[1].metric("Stäng 1", _pct(c_p1), delta=_delta(m["p1"], c_p1))
-        cols[2].metric("Modell X", _pct(m["pX"]))
-        cols[3].metric("Stäng X", _pct(c_pX), delta=_delta(m["pX"], c_pX))
-        cols[4].metric("Modell 2", _pct(m["p2"]))
-        cols[5].metric("Stäng 2", _pct(c_p2), delta=_delta(m["p2"], c_p2))
+        cols[0].metric("Malli 1", _pct(m["p1"]))
+        cols[1].metric("Sulk. 1", _pct(c_p1), delta=_delta(m["p1"], c_p1))
+        cols[2].metric("Malli X", _pct(m["pX"]))
+        cols[3].metric("Sulk. X", _pct(c_pX), delta=_delta(m["pX"], c_pX))
+        cols[4].metric("Malli 2", _pct(m["p2"]))
+        cols[5].metric("Sulk. 2", _pct(c_p2), delta=_delta(m["p2"], c_p2))
 
         st.divider()
 
@@ -87,16 +87,16 @@ def _render_match(match: dict) -> None:
         else:
             c_ah_home = c_ah_away = None
 
-        line_label = f"AH {ah_m['line']:+.2f} (modell)"
+        line_label = f"AH {ah_m['line']:+.2f} (malli)"
         close_line = ah_c.get("line")
         close_label = f"AH {close_line:+.2f} (Pinnacle)" if close_line is not None else "AH (Pinnacle)"
         st.markdown(f"**{line_label}  ·  {close_label}**")
 
         cols = st.columns(4)
-        cols[0].metric("Modell hemma", _pct(ah_m["home"]))
-        cols[1].metric("Stäng hemma", _pct(c_ah_home), delta=_delta(ah_m["home"], c_ah_home))
-        cols[2].metric("Modell borta", _pct(ah_m["away"]))
-        cols[3].metric("Stäng borta", _pct(c_ah_away), delta=_delta(ah_m["away"], c_ah_away))
+        cols[0].metric("Malli koti", _pct(ah_m["home"]))
+        cols[1].metric("Sulk. koti", _pct(c_ah_home), delta=_delta(ah_m["home"], c_ah_home))
+        cols[2].metric("Malli vieras", _pct(ah_m["away"]))
+        cols[3].metric("Sulk. vieras", _pct(c_ah_away), delta=_delta(ah_m["away"], c_ah_away))
 
         st.divider()
 
@@ -109,34 +109,34 @@ def _render_match(match: dict) -> None:
         else:
             c_over = c_under = None
 
-        tot_line_label = f"O/U {tot_m['line']} (modell)"
+        tot_line_label = f"O/U {tot_m['line']} (malli)"
         c_tot_line = tot_c.get("line")
         c_tot_label = f"O/U {c_tot_line} (Pinnacle)" if c_tot_line is not None else "O/U (Pinnacle)"
         st.markdown(f"**{tot_line_label}  ·  {c_tot_label}**")
 
         cols = st.columns(4)
-        cols[0].metric("Modell över", _pct(tot_m["over"]))
-        cols[1].metric("Stäng över", _pct(c_over), delta=_delta(tot_m["over"], c_over))
-        cols[2].metric("Modell under", _pct(tot_m["under"]))
-        cols[3].metric("Stäng under", _pct(c_under), delta=_delta(tot_m["under"], c_under))
+        cols[0].metric("Malli yli", _pct(tot_m["over"]))
+        cols[1].metric("Sulk. yli", _pct(c_over), delta=_delta(tot_m["over"], c_over))
+        cols[2].metric("Malli ali", _pct(tot_m["under"]))
+        cols[3].metric("Sulk. ali", _pct(c_under), delta=_delta(tot_m["under"], c_under))
 
 
 # ── Main render ───────────────────────────────────────────────────────────────
 
 def render():
-    st.title("Analys")
+    st.title("Analyysi")
 
     data = load_predictions()
     if not data:
-        st.info("Inga sparade förutsägelser. Kör save_predictions.py före omgången.")
+        st.info("Ei tallennettuja ennusteita. Aja save_predictions.py ennen kierrosta.")
         return
 
     rounds = sorted(s["round"] for s in data)
-    selected = st.selectbox("Omgång", rounds, index=len(rounds) - 1,
-                            format_func=lambda r: f"Omgång {r}")
+    selected = st.selectbox("Kierros", rounds, index=len(rounds) - 1,
+                            format_func=lambda r: f"Kierros {r}")
 
     snap = next(s for s in data if s["round"] == selected)
-    st.caption(f"Sparad: {snap['saved_at'][:16].replace('T', ' ')} UTC")
+    st.caption(f"Tallennettu: {snap['saved_at'][:16].replace('T', ' ')} UTC")
     st.divider()
 
     for match in snap["matches"]:

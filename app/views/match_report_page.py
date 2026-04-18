@@ -12,11 +12,11 @@ from data.match_reports import get_report, save_report, make_key
 
 
 def render():
-    st.title("Matchrapport")
+    st.title("Otteluraportti")
 
     fixture = st.session_state.get("report_fixture")
     if not fixture:
-        st.info("Välj en match från matchprogrammet.")
+        st.info("Valitse ottelu otteluohjelmasta.")
         return
 
     home = fixture["home"]
@@ -44,14 +44,14 @@ def render():
     else:
         col_xg2.write("")
 
-    with st.expander("Redigera xG-värden"):
+    with st.expander("Muokkaa xG-arvoja"):
         with st.form("xg_form"):
             c1, c2 = st.columns(2)
             xg_h = c1.number_input(f"{home} xG", value=float(xg_home or 0.0),
                                    min_value=0.0, max_value=10.0, step=0.01, format="%.2f")
             xg_a = c2.number_input(f"{away} xG", value=float(xg_away or 0.0),
                                    min_value=0.0, max_value=10.0, step=0.01, format="%.2f")
-            if st.form_submit_button("Spara xG", type="primary"):
+            if st.form_submit_button("Tallenna xG", type="primary"):
                 save_report(key, {"xg_home": xg_h, "xg_away": xg_a})
                 st.rerun()
 
@@ -63,7 +63,7 @@ def render():
     subs_away = report.get("subs_away", [])
 
     if lineup_home and lineup_away:
-        st.subheader("Laguppställningar")
+        st.subheader("Kokoonpanot")
         col_h, col_a = st.columns(2)
         with col_h:
             _render_lineup(home, lineup_home, subs_home)
@@ -73,10 +73,10 @@ def render():
 
     notes = report.get("notes", "")
     if notes:
-        st.subheader("Rapport")
+        st.subheader("Raportti")
         st.markdown(_safe_md(notes), unsafe_allow_html=True)
     else:
-        st.subheader("Rapport")
+        st.subheader("Raportti")
         _notes_form(key, notes)
 
 
@@ -100,7 +100,7 @@ def _render_lineup(team_name: str, lineup: dict, subs: list) -> None:
 
     if subs:
         st.markdown(
-            "<span style='color:gray;font-size:0.78em'>BYTEN</span>",
+            "<span style='color:gray;font-size:0.78em'>VAIHDOT</span>",
             unsafe_allow_html=True,
         )
         for s in subs:
@@ -119,11 +119,11 @@ def _safe_md(text: str) -> str:
 
 def _notes_form(key: str, current: str) -> None:
     new_notes = st.text_area(
-        "Rapport",
+        "Raportti",
         value=current,
         height=300,
         label_visibility="collapsed",
     )
-    if st.button("Spara rapport", type="primary"):
+    if st.button("Tallenna raportti", type="primary"):
         save_report(key, {"notes": new_notes})
         st.rerun()
