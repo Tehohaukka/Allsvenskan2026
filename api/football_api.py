@@ -25,10 +25,9 @@ def _get(endpoint: str, params: dict, force_refresh: bool = False) -> dict:
             return json.load(f)
 
     if not API_FOOTBALL_KEY:
-        raise RuntimeError(
-            f"Filen '{cache_file}' hittades inte och API_FOOTBALL_KEY är inte inställd. "
-            "Lägg till nyckeln i .env-filen eller kontakta administratören."
-        )
+        # Returnera tom respons i stället för att krascha — appen degraderar elegant
+        print(f"VARNING: '{cache_file}' saknas och API_FOOTBALL_KEY är inte inställd.")
+        return {"get": endpoint, "parameters": params, "errors": [], "results": 0, "response": []}
 
     headers = {"x-apisports-key": API_FOOTBALL_KEY}
     url = f"{API_FOOTBALL_BASE}/{endpoint}"

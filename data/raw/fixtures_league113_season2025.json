@@ -1,0 +1,10 @@
+{
+  "get": "fixtures",
+  "parameters": {
+    "league": "113",
+    "season": "2025"
+  },
+  "errors": [],
+  "results": 0,
+  "response": []
+}

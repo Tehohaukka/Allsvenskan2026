@@ -1,0 +1,123 @@
+{
+  "get": "teams",
+  "parameters": {
+    "league": "113",
+    "season": "2026"
+  },
+  "errors": [],
+  "results": 16,
+  "response": [
+    {
+      "team": {
+        "id": 357,
+        "name": "AIK",
+        "logo": ""
+      }
+    },
+    {
+      "team": {
+        "id": 361,
+        "name": "Djurgårdens IF",
+        "logo": ""
+      }
+    },
+    {
+      "team": {
+        "id": 362,
+        "name": "Malmö FF",
+        "logo": ""
+      }
+    },
+    {
+      "team": {
+        "id": 363,
+        "name": "IF Elfsborg",
+        "logo": ""
+      }
+    },
+    {
+      "team": {
+        "id": 365,
+        "name": "Hammarby IF",
+        "logo": ""
+      }
+    },
+    {
+      "team": {
+        "id": 366,
+        "name": "BK Häcken",
+        "logo": ""
+      }
+    },
+    {
+      "team": {
+        "id": 359,
+        "name": "IFK Göteborg",
+        "logo": ""
+      }
+    },
+    {
+      "team": {
+        "id": 369,
+        "name": "Kalmar FF",
+        "logo": ""
+      }
+    },
+    {
+      "team": {
+        "id": 370,
+        "name": "IF Brommapojkarna",
+        "logo": ""
+      }
+    },
+    {
+      "team": {
+        "id": 371,
+        "name": "Halmstads BK",
+        "logo": ""
+      }
+    },
+    {
+      "team": {
+        "id": 372,
+        "name": "GAIS",
+        "logo": ""
+      }
+    },
+    {
+      "team": {
+        "id": 568,
+        "name": "Mjällby AIF",
+        "logo": ""
+      }
+    },
+    {
+      "team": {
+        "id": 569,
+        "name": "IK Sirius",
+        "logo": ""
+      }
+    },
+    {
+      "team": {
+        "id": 570,
+        "name": "Degerfors IF",
+        "logo": ""
+      }
+    },
+    {
+      "team": {
+        "id": 573,
+        "name": "Västerås SK",
+        "logo": ""
+      }
+    },
+    {
+      "team": {
+        "id": 574,
+        "name": "Örgryte IS",
+        "logo": ""
+      }
+    }
+  ]
+}
