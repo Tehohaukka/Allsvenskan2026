@@ -10,6 +10,7 @@ import sys, os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 
 from app.data_loader import load_strengths_and_averages, load_teams_2026, get_strength
+from data.overrides import load_raw_overrides
 from model.strengths import expected_goals
 from model.poisson import DC_RHO
 from model.poisson import (
@@ -18,12 +19,21 @@ from model.poisson import (
 )
 
 
+def _teams_from_overrides() -> list[dict]:
+    """Fallback: build team list from overrides.json when API is unavailable."""
+    raw = load_raw_overrides()
+    return [{"id": int(tid), "name": info["name"]} for tid, info in raw.items()]
+
+
 def render():
     st.title("Matsianalyysi")
 
     with st.spinner("Ladataan dataa..."):
         strengths, avg_home, avg_away = load_strengths_and_averages()
         teams = load_teams_2026()
+
+    if not teams:
+        teams = _teams_from_overrides()
 
     if not teams:
         st.error("Joukkueita ei löydy. Tarkista API-avain tai kauden saatavuus.")

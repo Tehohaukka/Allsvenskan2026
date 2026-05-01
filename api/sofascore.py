@@ -26,8 +26,10 @@ _HEADERS = {
 
 _SOFASCORE_ALLSVENSKAN_ID = 40
 _SOFASCORE_ALLSVENSKAN_2026_SEASON = 87925
+_SOFASCORE_ALLSVENSKAN_2025_SEASON = 69956
 _CACHE_DIR = Path(__file__).parent.parent / "data" / "raw"
 _FIXTURES_CACHE = _CACHE_DIR / "sofascore_allsvenskan_2026.json"
+_FIXTURES_CACHE_2025 = _CACHE_DIR / "sofascore_allsvenskan_2025.json"
 
 _STATUS_MAP = {
     "finished": "FT",
@@ -87,11 +89,12 @@ def _sofascore_event_to_apifootball(event: dict) -> dict:
     }
 
 
-def load_fixtures_from_cache() -> list[dict]:
+def load_fixtures_from_cache(season: int = 2026) -> list[dict]:
     """Load and convert cached Sofascore fixtures to API-Football format."""
-    if not _FIXTURES_CACHE.exists():
+    cache = _FIXTURES_CACHE if season == 2026 else _FIXTURES_CACHE_2025
+    if not cache.exists():
         return []
-    with open(_FIXTURES_CACHE, encoding="utf-8") as f:
+    with open(cache, encoding="utf-8") as f:
         raw = json.load(f)
     return [_sofascore_event_to_apifootball(e) for e in raw]
 

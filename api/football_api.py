@@ -54,16 +54,15 @@ def get_teams(league_id: int, season: int) -> list[dict]:
 
 
 def get_fixtures(league_id: int, season: int, force_refresh: bool = False) -> list[dict]:
-    """Return all fixtures for a league/season. Falls back to Sofascore for 2026."""
-    from config import ALLSVENSKAN_ID, SEASON_2026
-    if league_id == ALLSVENSKAN_ID and season == SEASON_2026:
-        from api.sofascore import fetch_all_fixtures, load_fixtures_from_cache
-        if force_refresh:
-            return fetch_all_fixtures(force_refresh=True)
-        cached = load_fixtures_from_cache()
+    """Return all fixtures for a league/season. Uses Sofascore cache for 2025 and 2026."""
+    from config import ALLSVENSKAN_ID, SEASON_2025, SEASON_2026
+    from api.sofascore import load_fixtures_from_cache, fetch_all_fixtures
+    if league_id == ALLSVENSKAN_ID and season in (SEASON_2025, SEASON_2026):
+        cached = load_fixtures_from_cache(season=season)
         if cached:
             return cached
-        return fetch_all_fixtures()
+        if season == SEASON_2026:
+            return fetch_all_fixtures(force_refresh=force_refresh)
     data = _get("fixtures", {"league": league_id, "season": season}, force_refresh=force_refresh)
     return data["response"]
 

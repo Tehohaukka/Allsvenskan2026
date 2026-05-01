@@ -13,7 +13,7 @@ from scipy.stats import poisson
 
 
 MAX_GOALS = 10  # truncation limit for score matrix
-DC_RHO = -0.1  # Dixon-Coles correlation parameter (typically -0.05 to -0.15)
+DC_RHO = -0.20  # Dixon-Coles correlation. Backtested on Allsvenskan 2026 k1-5 vs 2025 training.
 
 
 def _tau(i: int, j: int, lam: float, mu: float, rho: float) -> float:

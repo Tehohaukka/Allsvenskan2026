@@ -1,6 +1,12 @@
 """
 Central data loading and caching for the Streamlit app.
 Uses st.cache_data to avoid re-fetching on every rerender.
+
+Model training strategy:
+  - 2025 Allsvenskan (weight=1.0): historical baseline, 240 matches
+  - 2026 Allsvenskan FT matches (weight=2.0): recency emphasis
+  - Bayesian shrinkage (k=10): stabilises ratings for teams with few games
+  - DC_RHO=-0.20: Dixon-Coles correction tuned on 2026 k1-5 backtest
 """
 
 import streamlit as st
@@ -14,24 +20,30 @@ from model.strengths import fixtures_to_df, calculate_strengths, league_averages
 from config import ALLSVENSKAN_ID, SEASON_2025, SEASON_2026
 from data.overrides import load_raw_overrides, normalise, NAME_OVERRIDES
 
-# Manuella ligagenomsnitt (mål/match).
-# Allsvenskan genomsnitt ca 2.95 mål/match, hemmalag vinner oftare.
-_AVG_HOME_OVERRIDE: float = 1.55
-_AVG_AWAY_OVERRIDE: float = 1.40
+import pandas as pd
+
+_SHRINKAGE_GAMES: float = 10.0   # Bayesian prior weight
+_WEIGHT_2026: float = 2.0        # 2026 data weighted 2x over 2025
 
 
 @st.cache_data(ttl=3600, show_spinner=False)
 def load_strengths_and_averages() -> tuple:
     """
-    Load 2025 fixtures for team strengths.
-    League avg_home/avg_away are set manually via _AVG_HOME_OVERRIDE / _AVG_AWAY_OVERRIDE.
+    Load 2025 + 2026 (FT) fixtures for team strengths.
+    2026 fixtures are weighted 2x. Bayesian shrinkage applied.
     Returns (strengths_df, avg_home, avg_away).
     """
     fixtures_2025 = get_fixtures(ALLSVENSKAN_ID, SEASON_2025)
-    df_2025 = fixtures_to_df(fixtures_2025)
-    strengths = calculate_strengths(df_2025)
+    df_2025 = fixtures_to_df(fixtures_2025, weight=1.0)
 
-    return strengths, _AVG_HOME_OVERRIDE, _AVG_AWAY_OVERRIDE
+    fixtures_2026 = get_fixtures(ALLSVENSKAN_ID, SEASON_2026)
+    df_2026 = fixtures_to_df(fixtures_2026, weight=_WEIGHT_2026)
+
+    df_combined = pd.concat([df_2025, df_2026], ignore_index=True)
+    strengths = calculate_strengths(df_combined, shrinkage_games=_SHRINKAGE_GAMES)
+    avgs = league_averages(df_combined)
+
+    return strengths, avgs["avg_home"], avgs["avg_away"]
 
 
 def get_session_overrides() -> dict[int, dict]:
@@ -62,9 +74,9 @@ def get_strength(strengths_df, team_id: int) -> dict:
             base = {
                 "attack": r["attack"],
                 "defense": r["defense"],
-                "games": int(r["games"]),
-                "scored": int(r["scored"]),
-                "conceded": int(r["conceded"]),
+                "games": float(r["games"]),
+                "scored": float(r["scored"]),
+                "conceded": float(r["conceded"]),
             }
     overrides = get_session_overrides()
     if team_id in overrides:
