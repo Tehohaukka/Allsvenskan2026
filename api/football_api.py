@@ -9,8 +9,11 @@ import requests
 from pathlib import Path
 from config import API_FOOTBALL_KEY, API_FOOTBALL_BASE
 
-CACHE_DIR = Path("data/raw")
-CACHE_DIR.mkdir(parents=True, exist_ok=True)
+CACHE_DIR = Path(__file__).parent.parent / "data" / "raw"
+try:
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
+except OSError:
+    pass
 
 
 def _cache_path(endpoint: str, params: dict) -> Path:

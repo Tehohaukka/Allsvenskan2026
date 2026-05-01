@@ -61,6 +61,10 @@ def render():
     with st.spinner("Ladataan otteluohjelma..."):
         rounds = _load_fixtures()
 
+    if not rounds:
+        st.error("Otteluohjelmaa ei voitu ladata. Paina 🔄 Päivitä yllä tai tarkista datalähde.")
+        return
+
     sorted_rounds = sorted(rounds.keys(), key=_round_number)
 
     round_labels = {r: f"Kierros {_round_number(r)}" for r in sorted_rounds}
